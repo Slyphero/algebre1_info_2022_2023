@@ -1,86 +1,77 @@
-\chapter{Applications}
-\begin{definition}[Application]
-	Soient E et F deux ensembles. $f:E \to F$ est une application si pour chaque $x \in E$, on associe un élément de F noté $f(x)$
+\chapter{Logique}
+\begin{definition}[Assertion]
+\par Une \textbf{assertion} est une affirmation mathématique qui peut être vraie pou fausse.
 \end{definition}
 
-\begin{definition}[Injectivité]
-	Soit $f:E \to F$, on dit que $f$ est injective si pour chaque élément de F, il y a au plus un élément de E qui y est associé. Autrement dit :
-	\begin{align*}
-		\text{f injective} \iff \{\forall (x_1, x_2) \in E^2, f(x_1) = f(x_2) \implies x_1 = x_2\}
-	\end{align*}
+\begin{definition}[Prédicat]
+\par Un \textbf{prédicat} est une "assertion" dépendant d'une ou plusieurs variables.
 \end{definition}
 
-\begin{definition}[Surjectivité]
-	Soit $f:E \to F$, on dit que $f$ est surjective si pour chaque élément de F, il y a au moins un élément de E qui y est associé.
-	Autrement dit :
-	\begin{align*}
-		\text{f surjective} \iff \{\forall y \in F, \exists x \in E, y = f(x)\}
-	\end{align*}
-\end{definition}
+\begin{exemple}~
+\begin{itemize}
+\item "Tous les entiers sont des nombres rationnels" est une assertion.
+\item "L'entier n est pair" est un prédicat.
+\item "Le réel $x$ est le carré d'un nombre réel" est un prédicat.
+\end{itemize}
+\end{exemple}
 
-\begin{definition}[Bijectivité]
-	Soit $f:E \to F$, on dit que $f$ est bijective si elle est injective et surjective, c'est-à-dire que pour chaque élément de F, il y a exactement un élément de E qui y est associé.
-	Autrement dit :
-	\begin{align*}
-		\text{f bijective} \iff \{\forall y \in F, \exists! x \in E, y = f(x)\}
-	\end{align*}
-\end{definition}
+\section{Opérations sur les prédicats}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+P & Q & P et Q & P ou Q & non(P) & P $\implies$ Q \\
+\hline
+V & V & V & V & F & V \\
+\hline
+V & F & F & V & F & F \\
+\hline
+F & V & F & V & V & V \\
+\hline 
+F & F & F & F & V & V \\
+\hline
+\end{tabular}
+\end{table}
 
-\begin{definition}[Ensemble fini]
-	$
-		\text{Un ensemble E est un ensemble fini non-vide} \iff \exists n \in \N^*, \exists \text{une application bijective de } \{1,2,\ldots,n\} \text{ dans } E
-	$
-\end{definition}
+\subsection{Négation}
+\begin{enumerate}
+\item $P \implies Q$ est équivalent à non(P) ou Q
+\item non(P ou Q) est équivalent à non(P) et non(Q)
+\item non(P et Q) est équivalent à non(P) ou non(Q)
+\end{enumerate}
 
-\begin{definition}[Fonction réciproque]
-	Soient E et F deux ensembles. Supposons que $f:E \to F$ est une application bijective. On peut définir l'application 
-	\begin{align*}
-		f^{-1} : 
-		\begin{cases}
-			F &\to E \\
-			y &\mapsto x
-		\end{cases}
-	\end{align*}
-	comme étant la réciproque de $f$.
-\end{definition}
+\begin{remarque}~
+\begin{enumerate}
+\item Pour contredire "tous les éléments de E ont une propriété P", il suffit de trouver un contre-exemple
 
-\begin{definition}[Composition]
-	Soient $f$ et $g$ deux applications telles que :
-	$f:E \to F$ et $g:F \to G$ on a l'application $g \circ f : E \to G$ qui est définie comme étant la composée de $f$ et de $g$.
-\end{definition}
+\begin{align*}
+    non(\forall x \in E, P(x)) \iff \exists x \in E, non(P(x))
+\end{align*}   
 
-\begin{definition}[Image directe et image réciproque]
-	Soient $f:E \to F$ une application, A une partie de E et B une partie de F. Nous avons :
-	\begin{align*}
-		f(A) = \{f(x), x \in A\} &\text{ : image directe} \\
-		f^{-1}(B) = \{x \in E, f(x) = B\} &\text{ : image réciproque}
-	\end{align*}
-\end{definition}
-\clearpage
-\begin{proposition}[Propriétés sur les images directes et réciproques]
-	Soient $f:E \to F$ une application et A, B des parties de F.
-	\begin{enumerate}
-		\item \label{prop_img_1} $f^{-1}(F \backslash A) = E \backslash f^{-1}(A)$
-		\item \label{prop_img_2} $f^{-1}(A \cup B) = f^{-1}(A) \cup f^{-1}(B)$
-		\item \label{prop_img_3} $f^{-1}(A \cap B) = f^{-1}(A) \cap f^{-1}(B)$
-		\item \label{prop_img_4} $f(A \cup B) = f(A) \cup f(B)$
-		\item \label{prop_img_5} $f(A \cap B) \subset f(A) \cap f(B)$
-	\end{enumerate}
-\end{proposition}
+\item Pour contredire "il existe un élément de E vérifiant une propriété P", il faut montrer que tous les éléments de E ne vérifient pas la propriété P.
 
-\begin{proof}
-	\ref{prop_img_5} : $f(A \cap B) \subset f(A) \cap f(B)$ \\
-	\par \noindent Soit $y \in f(A \cap B) = \{f(x), x \in A \cap B\}$, par définition : $\exists x \in A \cap B, y = f(x)$
-	\begin{align*}
-		x \in A \cap B &\iff x \in A \wedge x \in B \\
-		x \in A &\implies y = f(x) \subset f(A) \\
-		x \in B &\implies y = f(x) \subset f(B) 
-	\end{align*}
-	d'où $y \in f(A) \cap f(B)$
-\end{proof} 
+\begin{align*}
+non(\exists x \in E, P(x)) \iff \forall x \in E, non(P(x))
+\end{align*}
 
-\begin{remarque}
-	\begin{align*}
-		f(A \cap B) \neq f(A) \cap f(B)
-	\end{align*}
+\item Une affirmation de type :
+\begin{align*}
+\exists ! x \in E, P(x) \iff 
+\begin{cases}
+& \exists x \in E, P(x) \\
+& \text{Si } P(x) \text{ et } P(y) \text{ sont vrais, alors } x = y
+\end{cases}
+\end{align*}
+\end{enumerate}
 \end{remarque}
+
+\begin{remarque}~
+\\
+    $\{ (a_n) \}_{n \in \N} \subset \R, \displaystyle \lim_{n \to +\infty} a_n = \alpha \in \R$ \\
+A. Cauchy : 
+\begin{align*}
+    \forall \varepsilon > 0, \exists N, \left|a_n - \alpha \right| < \varepsilon, \forall n \geq N
+\end{align*}
+\end{remarque}
+
+
