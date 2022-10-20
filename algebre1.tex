@@ -1,0 +1,83 @@
+\documentclass[a4paper, 11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath, amsfonts, amsthm, amssymb}
+\usepackage[french]{babel}
+\usepackage{datetime}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{lastpage}
+\usepackage{framed}
+\usepackage[listings]{tcolorbox}
+\usepackage{indentfirst}
+\usepackage{hyperref, xcolor, color}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{diagbox}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{lipsum}
+\usepackage[Lenny]{fncychap}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\renewcommand{\chaptermark}[1]{
+\markboth{#1}{}}
+
+\fancypagestyle{IHA-fancy-style}{
+    \fancyhf{}
+    \lhead{\chaptername \ \thechapter \ \leftmark}
+    \rhead{\nouppercase{\rightmark}}
+    \cfoot{\thepage \ / \pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0.5pt}
+    \renewcommand{\footrulewidth}{0.5pt}
+}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \cfoot{\thepage \ / \pageref{LastPage}}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0.5pt}
+}
+\cfoot{\thepage \ / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\newtheorem{theoreme}{Théorème}
+\newtheorem{definition}{Définition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemme}{Lemme}
+\newtheorem{corollaire}{Corollaire}
+\newtheorem{remarque}{Remarque}
+\newtheorem{exemple}{Exemple}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+
+\DeclareMathSymbol{\mlqq}{\mathrel}{operators}{"5C}
+\DeclareMathSymbol{\mrqq}{\mathrel}{operators}{`"}
+
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+\title{\textbf{Algèbre 1}}
+\date{Année scolaire 2022-2023}
+\author{}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\clearpage
+	
+	\pagestyle{IHA-fancy-style}
+	\include{chapters/chapter1.tex}
+	\include{chapters/chapter2.tex}
+	\include{chapters/chapter3.tex}
+	\include{chapters/chapter4.tex}
+    \include{chapters/chapter5.tex}
+\end{document}

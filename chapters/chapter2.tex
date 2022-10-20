@@ -1,0 +1,170 @@
+\chapter{Ensembles et applications}
+\begin{definition}[Définition intuitive d'un ensemble]
+	Un ensemble E est une collection d'objets appelés éléments.
+	Si E contient un élément $x$, on dit que $x$ appartient à E, noté $x \in E$ 
+\end{definition}
+\begin{definition}[Ensemble vide]
+	L'ensemble vide noté $\emptyset$ est l'ensemble ne contenant aucun élément.
+\end{definition}
+\begin{definition}[Inclusion]
+	\begin{align*}
+		&\text{Un ensemble F est inclus dans un ensemble E } \iff \forall x \in F,\ x \in E. \\
+		&\text{On note : } F \subset E \text{ On dit aussi que F est un sous-ensemble, une partie de E}
+	\end{align*}
+\end{definition}
+\begin{definition}[Egalité d'ensembles]
+	\begin{align*}
+		\text{Deux ensembles E et F sont égaux} \iff E \subset F \text{ et } F \subset E
+	\end{align*} 
+\end{definition}
+\begin{definition}[Singleton]
+	Un singleton est un ensemble de ne contenant qu'un seul élément (noté entre accolades).
+\end{definition}
+\begin{definition}[Réunion d'ensembles]
+	Soient E et F deux ensembles.
+	\begin{align*}
+		E \cup F \text{ (lu E union F) } = \{\forall x,\ x \in E \text{ ou } x \in F \}
+	\end{align*}
+\end{definition}
+\begin{definition}[Intersection d'ensembles]
+	Soient E et F deux ensembles.
+	\begin{align*}
+		E \cap F \text{ (lu E inter F) } = \{\forall x,\ x \in E \text{ et } x \in F \}
+	\end{align*}
+\end{definition}
+\begin{proposition}[Propriétés sur les ensembles] Soient A, B, C, E des ensembles
+	\begin{enumerate}
+		\item Associativité :
+		\begin{align*}
+			A \cup (B \cup C) = (A \cup B) \cup C \\
+			A \cap (B \cap C) = (A \cap B) \cap C
+		\end{align*}
+		\item Elément neutre : 
+		\begin{align*}
+			A \cup \emptyset = A
+		\end{align*}
+		\item Intersection d'un ensemble et d'une partie :
+		\begin{align*}
+			A \subset E \iff \ A \cap E = E \cap A = A
+		\end{align*}
+		\item Commutativité :
+		\begin{align*}
+			A \cup B = B \cup A \\
+			A \cap B = B \cap A
+		\end{align*}
+		\item Distributivité :
+		\begin{align*}
+			A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
+			A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+		\end{align*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{definition}[Complémentaire d'un ensemble]~
+	\begin{align*}
+		E \backslash F = \{\forall x,\ x \in E \text{ et } x \notin F \}
+	\end{align*}
+\end{definition}
+\begin{remarque}Soient E, F des ensembles.
+	\begin{itemize}
+		\item $(E \backslash F) \subset E$
+		\item $(E \backslash F) \cup F = \emptyset$
+		\item $E \backslash F \neq F \backslash E$
+	\end{itemize}
+\end{remarque}
+\begin{remarque}Soient E et A des ensembles.
+	\begin{align*}
+		&A \subset E \\
+		&A^C = E \backslash A \\
+		&(A^C)^C = A
+	\end{align*}
+\end{remarque}
+
+\begin{proposition}[Lois de Morgan] Soient A et B des ensembles.
+	\begin{enumerate}
+		\item \label{prop10_1} $(A \cup B)^C = A^C \cap B^C$
+		\item \label{prop10_2} $(A \cap B)^C = A^C \cup B^C$
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+	\ref{prop10_1} \\
+	Soient A et B des ensembles et $x$ un élément quelconque.
+	\\
+	\framebox{$\subset$}
+	Par définition du complémentaire : 
+	\begin{align*}
+		x \in (A \cup B)^C \iff x \notin (A \cup B)
+	\end{align*}
+	$x \notin A$ car $A \subset (A \cup B)$ ce qui impliquerait que $x \in (A \cup B)$ et donc il y aurait une contradiction. On obtient une contradiction similaire si on suppose que $x \in B$. Ainsi on a $x \in A^C \text{ et } x \in B^C$, donc par la définition de l'intersection on a :
+	\begin{align*}
+		x \in (A^C \cap B^C)
+	\end{align*}
+	d'où :
+	\begin{align*}
+		(A \cup B)^C \subset (A^C \cap B^C)
+	\end{align*}
+	\framebox{$\supset$} Par définition de l'intersection :
+	\begin{align*}
+		x \in (A^C \cap B^C) &\iff x \in A^C \text{ et } x \in B^C \\
+		&\iff x \notin A \text{ et } x \notin B \\
+		&\iff x \in (A \cup B)^C
+	\end{align*}
+	d'où :
+	\begin{align*}
+		(A^C \cap B^C) \subset (A \cup B)^C
+	\end{align*}
+	Ainsi : 
+	\begin{align*}
+		(A \cup B)^C = A^C \cap B^C
+	\end{align*}
+\end{proof}
+
+\begin{proof}
+	\ref{prop10_2} 
+	\\
+	Soient A et B des ensembles et $x$ un élément quelconque. \\
+	\framebox{$\subset$} Par définition du complémentaire :
+	\begin{align*}
+		x \in (A \cap B)^C &\iff x \notin (A \cap B) \\ 
+		&\iff x \notin A \text{ et } x \notin B \\
+		&\iff x \in A^C \text{ et } x \in B^C \\
+		&\iff x \in (A^C \cap B^C)
+	\end{align*}
+	Sachant que :
+	\begin{align*}
+		(A^C \cap B^C) \subset (A^C \cup B^C)
+	\end{align*}
+	On a :
+	\begin{align*}
+		x \in (A^C \cap B^C) \implies x \in (A^C \cup B^C)
+	\end{align*}
+	d'où :
+	\begin{align*}
+		(A \cap B)^C \subset (A^C \cup B^C)
+	\end{align*}
+	\framebox{$\supset$} Par définition de la réunion :
+	\begin{align*}
+		x \in (A^C \cup B^C) &\iff x \in A^C \text{ ou } x \in B^C \\
+		&\iff x \notin A \text{ ou } x \notin B \\
+		&\iff x \notin (A \cap B) \\
+		&\iff x \in (A \cap B)^C
+	\end{align*}
+	Ainsi : 
+	\begin{align*}
+		(A^C \cap B^C) \subset (A \cup B)^C
+	\end{align*}
+	Donc :
+	\begin{align*}
+		(A \cap B)^C = A^C \cup B^C
+	\end{align*}
+\end{proof}
+
+\begin{definition}[Produit cartésien]
+	Soient E et F des ensembles
+	\begin{align*}
+		&- E \times F = \{(x, y),\ x \in E,\ y \in F\} \\
+		&- E \times E = E^2 \\
+		&- E \times E \times E = E^3
+	\end{align*}
+\end{definition}

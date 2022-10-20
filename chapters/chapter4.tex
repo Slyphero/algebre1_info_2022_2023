@@ -1,0 +1,77 @@
+\chapter{Logique}
+\begin{definition}[Assertion]
+\par Une \textbf{assertion} est une affirmation mathématique qui peut être vraie pou fausse.
+\end{definition}
+
+\begin{definition}[Prédicat]
+\par Un \textbf{prédicat} est une "assertion" dépendant d'une ou plusieurs variables.
+\end{definition}
+
+\begin{exemple}~
+\begin{itemize}
+\item "Tous les entiers sont des nombres rationnels" est une assertion.
+\item "L'entier n est pair" est un prédicat.
+\item "Le réel $x$ est le carré d'un nombre réel" est un prédicat.
+\end{itemize}
+\end{exemple}
+
+\section{Opérations sur les prédicats}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+P & Q & P et Q & P ou Q & non(P) & P $\implies$ Q \\
+\hline
+V & V & V & V & F & V \\
+\hline
+V & F & F & V & F & F \\
+\hline
+F & V & F & V & V & V \\
+\hline 
+F & F & F & F & V & V \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Négation}
+\begin{enumerate}
+\item $P \implies Q$ est équivalent à non(P) ou Q
+\item non(P ou Q) est équivalent à non(P) et non(Q)
+\item non(P et Q) est équivalent à non(P) ou non(Q)
+\end{enumerate}
+
+\begin{remarque}~
+\begin{enumerate}
+\item Pour contredire "tous les éléments de E ont une propriété P", il suffit de trouver un contre-exemple
+
+\begin{align*}
+    non(\forall x \in E, P(x)) \iff \exists x \in E, non(P(x))
+\end{align*}   
+
+\item Pour contredire "il existe un élément de E vérifiant une propriété P", il faut montrer que tous les éléments de E ne vérifient pas la propriété P.
+
+\begin{align*}
+non(\exists x \in E, P(x)) \iff \forall x \in E, non(P(x))
+\end{align*}
+
+\item Une affirmation de type :
+\begin{align*}
+\exists ! x \in E, P(x) \iff 
+\begin{cases}
+& \exists x \in E, P(x) \\
+& \text{Si } P(x) \text{ et } P(y) \text{ sont vrais, alors } x = y
+\end{cases}
+\end{align*}
+\end{enumerate}
+\end{remarque}
+
+\begin{remarque}~
+\\
+    $\{ (a_n) \}_{n \in \N} \subset \R, \displaystyle \lim_{n \to +\infty} a_n = \alpha \in \R$ \\
+A. Cauchy : 
+\begin{align*}
+    \forall \varepsilon > 0, \exists N, \left|a_n - \alpha \right| < \varepsilon, \forall n \geq N
+\end{align*}
+\end{remarque}
+
+
