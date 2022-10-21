@@ -133,9 +133,12 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
 \end{definition}
 
 \begin{proposition}[Propriétés des arguments]~
+    Soient $z, z_1, z_2 \in \C^3, n \in \N$
     \begin{itemize}
         \item $\arg{(z_1 \cdot z_2)} = \arg{z_1} + \arg{z_2}$
         \item $\arg{z^n} = n\arg{z}$
+        \item $\arg{\frac{z_1}{z_2}} = \arg{z_1} - \arg{z_2}$
+        \item $\arg{\frac{1}{z}} = -\arg{z}$
     \end{itemize}
 \end{proposition}
 
@@ -206,3 +209,24 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         \end{align*}
     \end{proof}
 \end{proposition}
+
+\begin{remarque}[Passer de la forme algébrique à la forme trigonométrique]~ 
+    \\
+    Soit $z = a + ib, (a, b) \in \R^2$ un nombre complexe sous sa forme algébrique, on peut passer sous la forme trigonométrique ainsi :
+    \begin{align*}
+        \cos{\theta} &= \frac{a}{|z|} & \sin{\theta} &= \frac{b}{|z|}
+    \end{align*}
+    \begin{exemple}
+        $z = 1 + i$
+        \\
+        On a : $|z| = \sqrt{1^2 + 1^2}$
+        \\
+        On a donc :
+        \begin{align*}
+            \cos{\theta} &= \frac{1}{\sqrt{2}} & \sin{\theta} &= \frac{1}{\sqrt{2}} \\
+                         &= \frac{\sqrt{2}}{2} &              &= \frac{\sqrt{2}}{2}
+        \end{align*}
+        On en déduit donc que $\theta = \frac{\pi}{4}$. \\
+        Ainsi $z = \sqrt{2}\left(\cos{\frac{\pi}{4}} + i\sin{\frac{\pi}{4}\right)$
+    \end{exemple}
+\end{remarque}
