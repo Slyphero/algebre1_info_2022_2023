@@ -6,13 +6,13 @@
 
 \section{Vision algébrique des nombres complexes}
 
-\begin{definition}[Forme algébrique des nombres complexes]
+\begin{definition}{Forme algébrique des nombres complexes}
 \begin{align*}
 \C = \{a + ib \ | \ (a, b) \in \R^2 \}, \text{ avec } i = \sqrt{-1}
 \end{align*}
 \end{definition}
 
-\begin{proposition}[Opérations sur les nombres complexes]~
+\begin{proposition}{Opérations sur les nombres complexes}
 \begin{enumerate}
 \item Somme : Soient $z = a + ib \in \C, w = c + id \in \C, (a, b, c, d) \in \R^4$
 \begin{align*}
@@ -73,7 +73,7 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     $(\C, +, \times)$ est un corps commutatif 
 \end{remarque}
 
-\begin{definition}[Conjugué d'un nombre complexe]
+\begin{definition}{Conjugué d'un nombre complexe}
     Soit $z = a + ib$ un nombre complexe, le nombre $\overline{z} = a - ib$ est dit le conjugué de z.
 \end{definition}
 
@@ -91,14 +91,14 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \end{proof}
 \end{proposition}
 
-\begin{definition}[Module d'un nombre complexe]
+\begin{definition}{Module d'un nombre complexe}
     Soit $z = a + ib$ un nombre complexe, on définit son module comme étant :
     \begin{align*}
         |z| = \sqrt{a^2 + b^2}
     \end{align*}
 \end{definition}
 
-\begin{proposition}[Propriétés des modules]
+\begin{proposition}{Propriétés des modules}
     Soient $z = a + ib$ et $z = a' + ib'$ des nombres complexes, on a les propriétés suivantes sur les modules :
     \begin{itemize}
         \item $|z \cdot z'| = |z| \cdot |z'|$
@@ -111,7 +111,7 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \end{itemize}
 \end{proposition}
 
-\begin{definition}[Partie réelle et partie imaginaire]
+\begin{definition}{Partie réelle et partie imaginaire}
     Soit $z = a + ib \in \C, (a, b) \in \R^2$
     \begin{align*}
         &\Re(z) = Re(z) = a \text{ (Partie réelle)} \\
@@ -119,7 +119,7 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \end{align*}
 \end{definition}
 
-\begin{proposition}[Propriétés]~
+\begin{proposition}{Propriétés}
     \begin{itemize}
         \item $z + \overline{z} = (a + ib) + (a - ib) = 2a \implies \Re(z) = \dfrac{z + \overline{z}}{2}$
         \item $z - \overline{z} = (a + ib) - (a - ib) = 2ib \implies \Im(z) = \dfrac{z - \overline{z}}{2i}$
@@ -128,11 +128,11 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
 
 \section{Vision géométrique des nombres complexes}
 
-\begin{definition}[Argument d'un nombre complexe]
+\begin{definition}{Argument d'un nombre complexe}
     Soit $z$ un nombre complexe, l'argument de $z$, noté $\arg{(z)}$ représente l'angle entre la droite des réels et celle issue de l'origine et passant par $z$.
 \end{definition}
 
-\begin{proposition}[Propriétés des arguments]~
+\begin{proposition}{Propriétés des arguments}
     Soient $z, z_1, z_2 \in \C^3, n \in \N$
     \begin{itemize}
         \item $\arg{(z_1 \cdot z_2)} = \arg{z_1} + \arg{z_2}$
@@ -142,7 +142,7 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \end{itemize}
 \end{proposition}
 
-\begin{definition}[Forme trigonométrique d'un nombre complexe]
+\begin{definition}{Forme trigonométrique d'un nombre complexe}
     Soit $z$ un nombre complexe, on peut l'écrire sous sa forme trigonométrique ainsi :
     \begin{align*}
         z = r (\cos{(\theta)} + i \sin{(\theta)})
@@ -154,7 +154,7 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \end{itemize}
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}{}
     Soient $z_1 = r_1(\cos{(\theta_1)} + i \sin{(\theta_1)})$ et $z_2 = r_2(\cos{(\theta_2)} + i\sin{(\theta_2)})$, deux nombres complexes. Nous avons la propriété suivante :
     \begin{align*}
         z_1 z_2 = r_1r_2(\cos{(\theta_1 + \theta_2)} + i\sin{(\theta_1 + \theta_2)})
@@ -172,26 +172,26 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \end{proof}
 \end{proposition}
 
-\begin{proposition}[Formule de Moivre]
+\begin{proposition}{Formule de Moivre}
     \begin{align*}
         (\cos{\theta} + i \sin{\theta})^n = \cos{(n\theta)} + i\sin{(n\theta)}
     \end{align*}
 \end{proposition}
 
-\begin{definition}[Forme exponentielle d'un nombre complexe]
+\begin{definition}{Forme exponentielle d'un nombre complexe}
     On peut écrire un nombre complexe sous une forme exponentielle :
     \begin{align*}
         z = r(\cos{\theta} + i\sin{\theta}) = re^{i\theta} 
     \end{align*}
 \end{definition}
 
-\begin{proposition}[Identité d'Euler]
+\begin{proposition}{Identité d'Euler}
     \begin{align*}
         e^{i \pi} = -1
     \end{align*}
 \end{proposition}
 
-\begin{proposition}[Formules d'Euler]
+\begin{proposition}{Formules d'Euler}
     \begin{align*}
         \cos{\theta} &= \frac{e^{i\theta} + e^{-i\theta}}{2} & \sin{\theta} &= \frac{e^{i\theta} - e^{-i\theta}}{2i}
     \end{align*}

@@ -21,6 +21,7 @@
 \usepackage[Lenny]{fncychap}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{tcolorbox}
 
 \renewcommand{\chaptermark}[1]{
 \markboth{#1}{}}
@@ -44,13 +45,30 @@
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
 
-\newtheorem{theoreme}{Théorème}
-\newtheorem{definition}{Définition}
-\newtheorem{proposition}{Proposition}
-\newtheorem{lemme}{Lemme}
-\newtheorem{corollaire}{Corollaire}
 \newtheorem{remarque}{Remarque}
 \newtheorem{exemple}{Exemple}
+
+\tcbset{colback=white, arc=0pt, outer arc=0pt}
+
+\newtcolorbox[auto counter,number within=section]{definition}[2][]{%
+colback=blue!3!white,colframe=blue!25!white,fonttitle=\color{black}\bfseries,
+title=Définition.~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{proposition}[2][]{%
+colback=green!3!white,colframe=green!25!white,fonttitle=\color{black}\bfseries,
+title=Proposition.~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{theoreme}[2][]{%
+colback=red!3!white,colframe=red!25!white,fonttitle=\color{black}\bfseries,
+title=Théorème.~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{corollaire}[2][]{%
+colback=gray!3!white,colframe=gray!25!white,fonttitle=\color{black}\bfseries,
+title=Corollaire.~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{lemme}[2][]{%
+colback=purple!3!white,colframe=purple!50!white,fonttitle=\color{black}\bfseries,
+title=Lemme.~\thetcbcounter: #2,#1}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
