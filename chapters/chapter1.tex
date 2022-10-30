@@ -1,32 +1,42 @@
 \chapter{Calcul Algébrique}
 \section{Point sur les ensembles de nombres}
 
-\begin{definition}{Ensemble des nombres entiers naturels}
+\begin{definitionbox}
+\begin{definition}[Ensemble des nombres entiers naturels]
 	\begin{align*}
 		\N = \{0; 1; ...\}
 	\end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Ensemble des nombres entiers relatifs}
+\begin{definitionbox}
+    \begin{definition}[Ensemble des nombres entiers relatifs]
 	\begin{align*}
 		\Z = \{...; -1; 0; 1; ...\}
 	\end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Ensemble des nombres rationnels}
+\begin{definitionbox}
+    \begin{definition}[Ensemble des nombres rationnels]
 	\begin{align*}
 		\Q = \left\{\frac{a}{b} \mid a \in \Z, b \in \N^* \right\}
 	\end{align*}
 \end{definition}
+\end{definitionbox}
 
+\begin{definitionbox}
 \begin{definition}{Ensemble des nombres réels}
 	\begin{align*}
 		\R = ]-\infty; +\infty[
 	\end{align*}
 \end{definition}
+\end{definitionbox}
 
 \subsection{Axiomatique}
 Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
+
+\begin{propositionbox}
 \begin{proposition}{Loi de composition +}
 	\begin{enumerate}
 		\item Associativité :
@@ -48,7 +58,9 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 		Remarque : Cette propriété ne s'applique pas dans $\N$
 	\end{enumerate}
 \end{proposition}
-\clearpage
+\end{propositionbox}
+
+\begin{propositionbox}
 \begin{proposition}{Loi de composition $\cdot$}
 	\begin{enumerate}
 		\item Associativité :
@@ -71,12 +83,18 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 		\end{align*}
 	\end{enumerate}
 \end{proposition}
+\end{propositionbox}
+
 \section{Opérations sur les fractions}
+
+\begin{propositionbox}
 \begin{proposition}{Addition sur les fractions}
 	\begin{align*}
 		\forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}
 	\end{align*}
 \end{proposition}
+\end{propositionbox}
+
 \begin{proof}~
 	\\
 	$\forall (a, b, c, d, a', b', c', d') \in \Z^8$
@@ -125,11 +143,15 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 		(ad + bc)b'd' - bd(a'd' + b'c') = 0
 	\end{align*}
 \end{proof}
-\begin{proposition}{Multiplication sur les fractions}
+
+\begin{propositionbox}
+\begin{proposition}[Multiplication sur les fractions]
 	\begin{align*}
 		\forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}
 	\end{align*}
 \end{proposition}
+\end{propositionbox}
+
 \begin{proof}~
 	\\
 	$\forall (a, b, c, d, a', b', c', d') \in \Z^8$\\
@@ -176,25 +198,33 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 	\end{align*}
 \end{proof}
 \section{Sommes}
-\begin{definition}{Définition de la somme}
+
+\begin{definitionbox}
+    \begin{definition}[Définition de la somme]
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k \in \R, \ m \leq k \leq n$
 	\begin{align*}
 		\sum_{k = m}^{n}a_k = a_m + a_{m+1} + \cdots + a_n
 	\end{align*}
 \end{definition}
+\end{definitionbox}
 
+\begin{leftstroke}
 \begin{remarque}
 	L'indice de sommation est important car :
 	\begin{align*}
 		\sum_{k = m}^{n}a_l = \underbrace{a_l + a_l + \cdots + a_l}_{n - m + 1 \textnormal{termes}} = (n - m + 1)a_l
 	\end{align*}
 \end{remarque}
-\begin{proposition}{Linéarité de la somme}
+\end{leftstroke}
+
+\begin{propositionbox}
+    \begin{proposition}[Linéarité de la somme]
 	$\forall m, n \in \N \textnormal{ avec } m \leq n$ et $a_k, b_k \in \R, \ m \leq k \leq n$
 	\begin{align*}
 		\sum_{k = m}^{n} (a_k + b_k) = \sum_{k=m}^{n}a_k + \sum_{k=m}^{n}b_k
 	\end{align*}
 \end{proposition}
+\end{propositionbox}
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, b_k \in \R, \ m \leq k \leq n$
 	\begin{align*}
@@ -203,12 +233,16 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 		&= \sum_{k=m}^{n}a_k + \sum_{k=m}^{n}b_k
 	\end{align*}
 \end{proof}
-\begin{proposition}{Linéarité de la multiplication de la somme par une constante}
+
+\begin{propositionbox}
+    \begin{proposition}[Linéarité de la multiplication de la somme par une constante]
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, \lambda \in \R, \ m \leq k \leq n$
 	\begin{align*}
 		\sum_{k = m}^{n} (\lambda a_k) = \lambda \sum_{k = m}^{n} a_k
 	\end{align*}
 \end{proposition}
+\end{propositionbox}
+
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, \lambda \in \R, \ m \leq k \leq n$
 	\begin{align*}
@@ -274,12 +308,14 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 \end{proof}
 
 \subsection{Sommes téléscopiques}
-\begin{proposition}{Somme téléscopique}
+\begin{propositionbox}
+    \begin{proposition}[Somme téléscopique]
 	$\forall m, n \in \N \textnormal{ avec }m \leq n,\ a_{k}  \in \R \textnormal{ avec } m \leq k \leq n$
 	\begin{align*}
 		\sum_{k = m}^{n} (a_k - a_{k-1}) = a_n - a_{m - 1} 
 	\end{align*}
 \end{proposition}
+\end{propositionbox}
 
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec }m \leq n,\ a_{k}  \in \R \textnormal{ avec } m \leq k \leq n$
@@ -300,14 +336,18 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 \end{proof}
 
 \section{Puissances}
-\begin{definition}{Puissance d'un réel}
+
+\begin{propositionbox}
+    \begin{definition}[Puissance d'un réel]
 	$\forall a \in \R,\ \forall n \in \N$
 	\begin{align*}
 		a^n = \underbrace{a \times a \times \cdots \times a}_{n fois}
 	\end{align*}
 \end{definition}
-\clearpage
-\begin{proposition}{Propriétés des puissances}
+\end{propositionbox}
+
+\begin{propositionbox}
+    \begin{proposition}[Propriétés des puissances]
 	$\forall a \in \R,\ \forall m, n \in \N$
 	\begin{enumerate}
 		\item \label{1.4_power1} $a^m \times a^n = a^{m + n}$
@@ -317,7 +357,7 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 		\item \label{1.4_power5} $a^0 = 1$
 	\end{enumerate}
 \end{proposition}
-
+\end{propositionbox}
 \begin{proof}
 	\ref{1.4_power1} $\forall a \in \R,\ \forall n, m \in \N$
 	\begin{align*}

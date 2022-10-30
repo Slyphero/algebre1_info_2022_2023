@@ -6,13 +6,16 @@
 
 \section{Vision algébrique des nombres complexes}
 
-\begin{definition}{Forme algébrique des nombres complexes}
+\begin{definitionbox}
+    \begin{definition}[Forme algébrique des nombres complexes]
 \begin{align*}
 \C = \{a + ib \ | \ (a, b) \in \R^2 \}, \text{ avec } i = \sqrt{-1}
 \end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{proposition}{Opérations sur les nombres complexes}
+\begin{propositionbox}
+    \begin{proposition}[Opérations sur les nombres complexes]~
 \begin{enumerate}
 \item Somme : Soient $z = a + ib \in \C, w = c + id \in \C, (a, b, c, d) \in \R^4$
 \begin{align*}
@@ -34,15 +37,6 @@ z = a + ib \implies -z = -a + i(-b)
 z \cdot w = (ac - bd) + i(ad + bc)
 \end{align*}
 
-\begin{proof}
-\begin{align*}
-z \cdot w &= (a + ib) \cdot (c + id) \\
-          &\mlqq=\mrqq a \cdot (c + id) + ib \cdot (c + id) \\
-          &\mlqq=\mrqq a \cdot c + a \cdot id + ib \cdot c + ib \cdot id \\
-          &\mlqq=\mrqq ac + i(ad) + i(bc) + i^2 bd \\
-          &\mlqq=\mrqq ac - bd + i(ad + bc)
-\end{align*}
-\end{proof}
 
 \begin{enumerate}
     \item Associativité :
@@ -68,21 +62,38 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
 
 \end{enumerate}
 \end{proposition}
+\end{propositionbox}
 
+\begin{proof}{Produit}
+\begin{align*}
+z \cdot w &= (a + ib) \cdot (c + id) \\
+          &\mlqq=\mrqq a \cdot (c + id) + ib \cdot (c + id) \\
+          &\mlqq=\mrqq a \cdot c + a \cdot id + ib \cdot c + ib \cdot id \\
+          &\mlqq=\mrqq ac + i(ad) + i(bc) + i^2 bd \\
+          &\mlqq=\mrqq ac - bd + i(ad + bc)
+\end{align*}
+\end{proof}
+
+\begin{leftstroke}
 \begin{remarque}
     $(\C, +, \times)$ est un corps commutatif 
 \end{remarque}
+\end{leftstroke}
 
-\begin{definition}{Conjugué d'un nombre complexe}
+\begin{definitionbox}
+    \begin{definition}[Conjugué d'un nombre complexe]
     Soit $z = a + ib$ un nombre complexe, le nombre $\overline{z} = a - ib$ est dit le conjugué de z.
 \end{definition}
+\end{definitionbox}
 
+\begin{propositionbox}
 \begin{proposition}{}
     Soient $z = a + ib, z'= a - ib, (a, b) \in \R^2, z \in \C$
     \begin{align*}
         z \cdot z' = a^2 + b^2
     \end{align*}
 \end{proposition}
+\end{propositionbox}
 \begin{proof}
         \begin{align*}
             z \cdot z' &= (a + ib)(a - ib) \\
@@ -92,14 +103,17 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \end{proof}
 
 
-\begin{definition}{Module d'un nombre complexe}
+\begin{definitionbox}
+    \begin{definition}[Module d'un nombre complexe]
     Soit $z = a + ib$ un nombre complexe, on définit son module comme étant :
     \begin{align*}
         |z| = \sqrt{a^2 + b^2}
     \end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{proposition}{Propriétés des modules}
+\begin{propositionbox}
+    \begin{proposition}[Propriétés des modules]
     Soient $z = a + ib$ et $z = a' + ib'$ des nombres complexes, on a les propriétés suivantes sur les modules :
     \begin{itemize}
         \item $|z \cdot z'| = |z| \cdot |z'|$
@@ -111,29 +125,35 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         \item $|z| = |\overline{z}| = |-z| = |-\overline{z}|$
     \end{itemize}
 \end{proposition}
+\end{propositionbox}
 
-\begin{definition}{Partie réelle et partie imaginaire}
+\begin{definitionbox}
+    \begin{definition}[Partie réelle et partie imaginaire]
     Soit $z = a + ib \in \C, (a, b) \in \R^2$
     \begin{align*}
         &\Re(z) = Re(z) = a \text{ (Partie réelle)} \\
         &\Im(z) = Im(z) = b \text{ (Partie imaginaire)}
     \end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{proposition}{Propriétés}
+\begin{propositionbox}
+\begin{proposition}
     \begin{itemize}
         \item $z + \overline{z} = (a + ib) + (a - ib) = 2a \implies \Re(z) = \dfrac{z + \overline{z}}{2}$
         \item $z - \overline{z} = (a + ib) - (a - ib) = 2ib \implies \Im(z) = \dfrac{z - \overline{z}}{2i}$
     \end{itemize}
 \end{proposition}
-
+\end{propositionbox}
 \section{Vision géométrique des nombres complexes}
-
-\begin{definition}{Argument d'un nombre complexe}
+\begin{definitionbox}
+    \begin{definition}[Argument d'un nombre complexe]
     Soit $z$ un nombre complexe, l'argument de $z$, noté $\arg{(z)}$ représente l'angle entre la droite des réels et celle issue de l'origine et passant par $z$.
 \end{definition}
+\end{definitionbox}
 
-\begin{proposition}{Propriétés des arguments}
+\begin{propositionbox}
+    \begin{proposition}[Propriétés des arguments]
     Soient $z, z_1, z_2 \in \C^3, n \in \N$
     \begin{itemize}
         \item $\arg{(z_1 \cdot z_2)} = \arg{z_1} + \arg{z_2}$
@@ -142,8 +162,10 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         \item $\arg{\frac{1}{z}} = -\arg{z}$
     \end{itemize}
 \end{proposition}
+\end{propositionbox}
 
-\begin{definition}{Forme trigonométrique d'un nombre complexe}
+\begin{definitionbox}
+    \begin{definition}[Forme trigonométrique d'un nombre complexe]
     Soit $z$ un nombre complexe, on peut l'écrire sous sa forme trigonométrique ainsi :
     \begin{align*}
         z = r (\cos{(\theta)} + i \sin{(\theta)})
@@ -154,7 +176,9 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         \item $\theta = \arg{(z)}$
     \end{itemize}
 \end{definition}
+\end{definitionbox}
 
+\begin{propositionbox}
 \begin{proposition}{}
     Soient $z_1 = r_1(\cos{(\theta_1)} + i \sin{(\theta_1)})$ et $z_2 = r_2(\cos{(\theta_2)} + i\sin{(\theta_2)})$, deux nombres complexes. Nous avons la propriété suivante :
     \begin{align*}
@@ -162,6 +186,7 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \end{align*}
 
 \end{proposition}
+\end{propositionbox}
 \begin{proof}
         \begin{align*}
             z_1 z_2 &= (r_1(\cos{(\theta_1)} + i \sin{(\theta_1)}) (r_2(\cos{(\theta_2)}+i \sin{(\theta_2)}) \\
@@ -173,30 +198,38 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         \end{align*}
     \end{proof}
 
-\begin{proposition}{Formule de Moivre}
+\begin{propositionbox}
+    \begin{proposition}[Formule de Moivre]
     \begin{align*}
         (\cos{\theta} + i \sin{\theta})^n = \cos{(n\theta)} + i\sin{(n\theta)}
     \end{align*}
 \end{proposition}
+\end{propositionbox}
 
-\begin{definition}{Forme exponentielle d'un nombre complexe}
+\begin{definitionbox}
+    \begin{definition}[Forme exponentielle d'un nombre complexe]
     On peut écrire un nombre complexe sous une forme exponentielle :
     \begin{align*}
         z = r(\cos{\theta} + i\sin{\theta}) = re^{i\theta} 
     \end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{proposition}{Identité d'Euler}
+\begin{propositionbox}
+    \begin{proposition}[Identité d'Euler]
     \begin{align*}
         e^{i \pi} = -1
     \end{align*}
 \end{proposition}
+\end{propositionbox}
 
-\begin{proposition}{Formules d'Euler}
+\begin{propositionbox}
+    \begin{proposition}[Formules d'Euler]
     \begin{align*}
         \cos{\theta} &= \frac{e^{i\theta} + e^{-i\theta}}{2} & \sin{\theta} &= \frac{e^{i\theta} - e^{-i\theta}}{2i}
     \end{align*}
 \end{proposition}
+\end{propositionbox}
 \begin{proof}
         \begin{align*}
             e^{i\theta} + e^{-i\theta} &= (\cos{\theta} + i\sin{\theta}) + (\cos{\theta} - i\sin{\theta}) \\
@@ -211,13 +244,18 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         \end{align*}
 \end{proof}
 
+\begin{leftstroke}
 \begin{remarque}[Passer de la forme algébrique à la forme trigonométrique]~ 
     \\
     Soit $z = a + ib, (a, b) \in \R^2$ un nombre complexe sous sa forme algébrique, on peut passer sous la forme trigonométrique ainsi :
     \begin{align*}
         \cos{\theta} &= \frac{a}{|z|} & \sin{\theta} &= \frac{b}{|z|}
     \end{align*}
-    \begin{exemple}
+    \end{remarque}
+\end{leftstroke}
+
+\begin{leftstroke}
+\begin{exemple}
         $z = 1 + i$
         \\
         On a : $|z| = \sqrt{1^2 + 1^2}$
@@ -230,9 +268,10 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         On en déduit donc que $\theta = \frac{\pi}{4}$. \\
         Ainsi $z = \sqrt{2}\left(\cos{\frac{\pi}{4}} + i\sin{\frac{\pi}{4}}\right)$
     \end{exemple}
-\end{remarque}
+\end{leftstroke}
 
-\begin{definition}{Racine n-ième d'un nombre complexe}
+\begin{definitionbox}
+    \begin{definition}[Racine n-ième d'un nombre complexe]
     Soit $z \in \C$. On appelle racine n-ième du nombre complexe $z$ tout nombre complexe $w \in \C$ vérifiant :
     \begin{align*}
         w^n = z
@@ -242,8 +281,10 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         Z_k = \rho^{\frac{1}{n}} e^{i\left(\frac{\theta}{n} + \frac{2k\pi}{n} \right)} 
     \end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Racine n-ième de l'unité}
+\begin{definitionbox}
+    \begin{definition}[Racine n-ième de l'unité]
     On appelle racine n-ième de l'unité, une racine n-ième de 1, on notera $\mathbb{U}_n$ l'ensemble des racines n-ièmes de l'unité :
     \begin{align*}
         \mathbb{U}_n = \{z \in \C | z^n = 1 \}
@@ -253,10 +294,10 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
         \omega_k = e^{\frac{2ik\pi}{n}}, k \in \llbracket 0, n - 1 \rrbracket
     \end{align*}
 \end{definition}
-
+\end{definitionbox}
 \section{Géométrie des nombres complexes}
 \begin{itemize}
-    \item $z \mapsto z + a, (a \in \C)$ : translation de vecteur $\vect{u}$ d'affixe $a$
+    \item $z \mapsto z + a, (a \in \C)$ : translation de vecteur $\vec{u}$ d'affixe $a$
     \item $z \mapsto az, (a \in \R^*)$ : homothétie de rapport $a$
     \item $z \mapsto e^{i\theta}z, (\theta \in \R)$ : rotation d'angle $\theta$ et de centre $0$
     \item $z \mapsto \overline{z}$ : réflexion par rapport à l'axe des réels
@@ -271,6 +312,7 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \item L'asymptote verticale de partie réelle $a$ : $z + \overline{z} = 2a$
 \end{itemize}
 
+\begin{leftstroke}
 \begin{exemple}
     $z \mapsto \frac{1}{z}$ 
     \\
@@ -287,7 +329,9 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     \\
     Ce qui équivaut à $\left| w - \frac{1}{2} \right|^2 = \left( \frac{1}{2} \right)^2 \iff \left|w - \frac{1}{2}\right| = \left(\frac{1}{2}\right)$
 \end{exemple}
+\end{leftstroke}
 
+\begin{leftstroke}
 \begin{exemple}
     $P = \left\{ z \in \C, \Im{(z)} > 0\right\}$ : le demi-plan de Poincaré    
     \\
@@ -313,3 +357,4 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
             A la fin on obtient : $w\overline{w} < 1 \implies |w| < 1$
     \end{enumerate}
 \end{exemple}
+\end{leftstroke}

@@ -1,12 +1,17 @@
 \chapter{Logique}
-\begin{definition}{Assertion}
+\begin{definitionbox}
+    \begin{definition}[Assertion]
 \par Une \textbf{assertion} est une affirmation mathématique qui peut être vraie pou fausse.
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Prédicat}
+\begin{definitionbox}
+    \begin{definition}[Prédicat]
 \par Un \textbf{prédicat} est une "assertion" dépendant d'une ou plusieurs variables.
 \end{definition}
+\end{definitionbox}
 
+\begin{leftstroke}
 \begin{exemple}~
 \begin{itemize}
 \item "Tous les entiers sont des nombres rationnels" est une assertion.
@@ -14,7 +19,7 @@
 \item "Le réel $x$ est le carré d'un nombre réel" est un prédicat.
 \end{itemize}
 \end{exemple}
-
+\end{leftstroke}
 \section{Opérations sur les prédicats}
 \begin{table}[h!]
 \centering
@@ -40,6 +45,7 @@ F & F & F & F & V & V \\
 \item non(P et Q) est équivalent à non(P) ou non(Q)
 \end{enumerate}
 
+\begin{leftstroke}
 \begin{remarque}~
 \begin{enumerate}
 \item Pour contredire "tous les éléments de E ont une propriété P", il suffit de trouver un contre-exemple
@@ -64,7 +70,9 @@ non(\exists x \in E, P(x)) \iff \forall x \in E, non(P(x))
 \end{align*}
 \end{enumerate}
 \end{remarque}
+\end{leftstroke}
 
+\begin{leftstroke}
 \begin{remarque}~
 \\
     $\{ (a_n) \}_{n \in \N} \subset \R, \displaystyle \lim_{n \to +\infty} a_n = \alpha \in \R$ \\
@@ -73,5 +81,5 @@ A. Cauchy :
     \forall \varepsilon > 0, \exists N, \left|a_n - \alpha \right| < \varepsilon, \forall n \geq N
 \end{align*}
 \end{remarque}
-
+\end{leftstroke}
 

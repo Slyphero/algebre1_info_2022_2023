@@ -1,39 +1,62 @@
 \chapter{Ensembles et applications}
 \section{Ensembles}
-\begin{definition}{Définition intuitive d'un ensemble}
+
+\begin{definitionbox}
+    \begin{definition}[Définition intuitive d'un ensemble]
 	Un ensemble E est une collection d'objets appelés éléments.
 	Si E contient un élément $x$, on dit que $x$ appartient à E, noté $x \in E$ 
 \end{definition}
-\begin{definition}{Ensemble vide}
+\end{definitionbox}
+
+\begin{definitionbox}
+    \begin{definition}[Ensemble vide]
 	L'ensemble vide noté $\emptyset$ est l'ensemble ne contenant aucun élément.
 \end{definition}
-\begin{definition}{Inclusion}
+\end{definitionbox}
+
+\begin{definitionbox}
+    \begin{definition}[Inclusion]
 	\begin{align*}
 		&\text{Un ensemble F est inclus dans un ensemble E } \iff \forall x \in F,\ x \in E. \\
 		&\text{On note : } F \subset E \text{ On dit aussi que F est un sous-ensemble, une partie de E}
 	\end{align*}
 \end{definition}
-\begin{definition}{Egalité d'ensembles}
+\end{definitionbox}
+
+\begin{definitionbox}
+    \begin{definition}[Egalité d'ensembles]
 	\begin{align*}
 		\text{Deux ensembles E et F sont égaux} \iff E \subset F \text{ et } F \subset E
 	\end{align*} 
 \end{definition}
-\begin{definition}{Singleton}
+\end{definitionbox}
+
+\begin{definitionbox}
+\begin{definition}[Singleton]
 	Un singleton est un ensemble de ne contenant qu'un seul élément (noté entre accolades).
 \end{definition}
-\begin{definition}{Réunion d'ensembles}
+\end{definitionbox}
+
+\begin{definitionbox}
+    \begin{definition}[Réunion d'ensembles]
 	Soient E et F deux ensembles.
 	\begin{align*}
 		E \cup F \text{ (lu E union F) } = \{\forall x,\ x \in E \text{ ou } x \in F \}
 	\end{align*}
 \end{definition}
-\begin{definition}{Intersection d'ensembles}
+\end{definitionbox}
+
+\begin{definitionbox}
+    \begin{definition}[Intersection d'ensembles]
 	Soient E et F deux ensembles.
 	\begin{align*}
 		E \cap F \text{ (lu E inter F) } = \{\forall x,\ x \in E \text{ et } x \in F \}
 	\end{align*}
 \end{definition}
-\begin{proposition}{Propriétés sur les ensembles} Soient A, B, C, E des ensembles
+\end{definitionbox}
+
+\begin{propositionbox}
+    \begin{proposition}[Propriétés sur les ensembles] Soient A, B, C, E des ensembles
 	\begin{enumerate}
 		\item Associativité :
 		\begin{align*}
@@ -61,12 +84,17 @@
 		\end{align*}
 	\end{enumerate}
 \end{proposition}
+\end{propositionbox}
 
-\begin{definition}{Complémentaire d'un ensemble}
+\begin{definitionbox}
+    \begin{definition}[Complémentaire d'un ensemble]
 	\begin{align*}
 		E \backslash F = \{\forall x,\ x \in E \text{ et } x \notin F \}
 	\end{align*}
 \end{definition}
+\end{definitionbox}
+
+\begin{leftstroke}
 \begin{remarque}Soient E, F des ensembles.
 	\begin{itemize}
 		\item $(E \backslash F) \subset E$
@@ -74,6 +102,9 @@
 		\item $E \backslash F \neq F \backslash E$
 	\end{itemize}
 \end{remarque}
+\end{leftstroke}
+
+\begin{leftstroke}
 \begin{remarque}Soient E et A des ensembles.
 	\begin{align*}
 		&A \subset E \\
@@ -81,14 +112,16 @@
 		&(A^C)^C = A
 	\end{align*}
 \end{remarque}
+\end{leftstroke}
 
-\begin{proposition}{Lois de Morgan} Soient A et B des ensembles.
+\begin{propositionbox}
+    \begin{proposition}[Lois de Morgan] Soient A et B des ensembles.
 	\begin{enumerate}
 		\item \label{prop10_1} $(A \cup B)^C = A^C \cap B^C$
 		\item \label{prop10_2} $(A \cap B)^C = A^C \cup B^C$
 	\end{enumerate}
 \end{proposition}
-
+\end{propositionbox}
 \begin{proof}
 	\ref{prop10_1} \\
 	Soient A et B des ensembles et $x$ un élément quelconque.
@@ -162,7 +195,8 @@
 	\end{align*}
 \end{proof}
 
-\begin{definition}{Produit cartésien}
+\begin{definitionbox}
+    \begin{definition}[Produit cartésien]
 	Soient E et F des ensembles
 	\begin{align*}
 		&- E \times F = \{(x, y),\ x \in E,\ y \in F\} \\
@@ -170,40 +204,51 @@
 		&- E \times E \times E = E^3
 	\end{align*}
 \end{definition}
-
+\end{definitionbox}
 \section{Applications}
-\begin{definition}{Application}
+\begin{definitionbox}
+    \begin{definition}[Application]
 	Soient E et F deux ensembles. $f:E \to F$ est une application si pour chaque $x \in E$, on associe un élément de F noté $f(x)$
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Injectivité}
+\begin{definitionbox}
+    \begin{definition}[Injectivité]
 	Soit $f:E \to F$, on dit que $f$ est injective si pour chaque élément de F, il y a au plus un élément de E qui y est associé. Autrement dit :
 	\begin{align*}
 		\text{f injective} \iff \{\forall (x_1, x_2) \in E^2, f(x_1) = f(x_2) \implies x_1 = x_2\}
 	\end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Surjectivité}
+\begin{definitionbox}
+    \begin{definition}[Surjectivité]
 	Soit $f:E \to F$, on dit que $f$ est surjective si pour chaque élément de F, il y a au moins un élément de E qui y est associé.
 	Autrement dit :
 	\begin{align*}
 		\text{f surjective} \iff \{\forall y \in F, \exists x \in E, y = f(x)\}
 	\end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Bijectivité}
+\begin{definitionbox}
+    \begin{definition}[Bijectivité]
 	Soit $f:E \to F$, on dit que $f$ est bijective si elle est injective et surjective, c'est-à-dire que pour chaque élément de F, il y a exactement un élément de E qui y est associé.
 	Autrement dit :
 	\begin{align*}
 		\text{f bijective} \iff \{\forall y \in F, \exists! x \in E, y = f(x)\}
 	\end{align*}
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Ensemble fini}
+\begin{definitionbox}
+    \begin{definition}[Ensemble fini]
     Un ensemble E est un ensemble fini non-vide si et seulement si pour tout entier $n \geq 1$, il existe une application bijective de $\{1, 2, \ldots, n\}$ dans E.
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Fonction réciproque}
+\begin{definitionbox}
+    \begin{definition}[Fonction réciproque]
 	Soient E et F deux ensembles. Supposons que $f:E \to F$ est une application bijective. On peut définir l'application 
 	\begin{align*}
 		f^{-1} : 
@@ -214,21 +259,27 @@
 	\end{align*}
 	comme étant la réciproque de $f$.
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Composition}
+\begin{definitionbox}
+    \begin{definition}[Composition]
 	Soient $f$ et $g$ deux applications telles que :
 	$f:E \to F$ et $g:F \to G$ on a l'application $g \circ f : E \to G$ qui est définie comme étant la composée de $f$ et de $g$.
 \end{definition}
+\end{definitionbox}
 
-\begin{definition}{Image directe et image réciproque}
+\begin{definitionbox}
+    \begin{definition}[Image directe et image réciproque]
 	Soient $f:E \to F$ une application, A une partie de E et B une partie de F. Nous avons :
 	\begin{align*}
 		f(A) = \{f(x), x \in A\} &\text{ : image directe} \\
 		f^{-1}(B) = \{x \in E, f(x) \in B\} &\text{ : image réciproque}
 	\end{align*}
 \end{definition}
-\clearpage
-\begin{proposition}{Propriétés sur les images directes et réciproques}
+\end{definitionbox}
+
+\begin{propositionbox}
+    \begin{proposition}[Propriétés sur les images directes et réciproques]
 	Soient $f:E \to F$ une application et A, B des parties de F.
 	\begin{enumerate}
 		\item \label{prop_img_1} $f^{-1}(F \backslash A) = E \backslash f^{-1}(A)$
@@ -238,6 +289,7 @@
 		\item \label{prop_img_5} $f(A \cap B) \subset f(A) \cap f(B)$
 	\end{enumerate}
 \end{proposition}
+\end{propositionbox}
 
 \begin{proof}
 	\ref{prop_img_5} : $f(A \cap B) \subset f(A) \cap f(B)$ \\
@@ -250,8 +302,10 @@
 	d'où $y \in f(A) \cap f(B)$
 \end{proof} 
 
+\begin{leftstroke}
 \begin{remarque}
 	\begin{align*}
 		f(A \cap B) \neq f(A) \cap f(B)
 	\end{align*}
 \end{remarque}
+\end{leftstroke}

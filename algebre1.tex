@@ -23,6 +23,9 @@
 \usepackage{lastpage}
 \usepackage{tcolorbox}
 \usepackage{stmaryrd}
+\tcbuselibrary{skins}
+\usepackage{endnotes}
+\usepackage{titlesec}
 
 \renewcommand{\chaptermark}[1]{
 \markboth{#1}{}}
@@ -46,30 +49,33 @@
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
 
+\newtheorem{definition}{Définition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theoreme}{Théorème}
+\newtheorem{lemme}{Lemme}
+\newtheorem{corollaire}{Corollaire}
 \newtheorem{remarque}{Remarque}
 \newtheorem{exemple}{Exemple}
 
 \tcbset{colback=white, arc=0pt, outer arc=0pt}
 
-\newtcolorbox[auto counter,number within=section]{definition}[2][]{%
-colback=blue!3!white,colframe=blue!25!white,fonttitle=\color{black}\bfseries,
-title=Définition.~\thetcbcounter: #2,#1}
+\newtcolorbox{definitionbox}[1][]{%
+colback=white,colframe=black, boxrule=0.3mm, arc=1mm, outer arc=1mm}
 
-\newtcolorbox[auto counter,number within=section]{proposition}[2][]{%
-colback=green!3!white,colframe=green!25!white,fonttitle=\color{black}\bfseries,
-title=Proposition.~\thetcbcounter: #2,#1}
+\newtcolorbox{propositionbox}[1][]{%
+colback=gray!15!white,colframe=black, boxrule=0.3mm, arc=1mm, outer arc=1mm}
 
-\newtcolorbox[auto counter,number within=section]{theoreme}[2][]{%
-colback=red!3!white,colframe=red!25!white,fonttitle=\color{black}\bfseries,
-title=Théorème.~\thetcbcounter: #2,#1}
+\newtcolorbox{theoremebox}[1][]{%
+colback=white, colframe=black, boxrule=0.6mm, arc=0mm, outer arc=0mm}
 
-\newtcolorbox[auto counter,number within=section]{corollaire}[2][]{%
-colback=gray!3!white,colframe=gray!25!white,fonttitle=\color{black}\bfseries,
-title=Corollaire.~\thetcbcounter: #2,#1}
+\newtcolorbox{lemmebox}[1][]{%
+colback=gray!15!white, colframe=black, boxrule=0.6mm, arc=0mm, outer arc=0mm}
 
-\newtcolorbox[auto counter,number within=section]{lemme}[2][]{%
-colback=purple!3!white,colframe=purple!50!white,fonttitle=\color{black}\bfseries,
-title=Lemme.~\thetcbcounter: #2,#1}
+\newtcolorbox{corollairebox}[1][]{%
+colback=gray!15!white, colframe=black, boxrule=0.3mm, arc=0mm, outer arc=0mm}
+
+\newtcolorbox{leftstroke}[1][]{%
+enhanced, frame hidden, borderline west={0.3mm}{0mm}{black}, colback=white, #1, top=0pt, bottom=0pt, left=2pt}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
