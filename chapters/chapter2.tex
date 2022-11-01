@@ -60,27 +60,27 @@
 	\begin{enumerate}
 		\item Associativité :
 		\begin{align*}
-			A \cup (B \cup C) = (A \cup B) \cup C \\
-			A \cap (B \cap C) = (A \cap B) \cap C
+            \boxshadow{A \cup (B \cup C) = (A \cup B) \cup C} \\
+            \boxshadow{A \cap (B \cap C) = (A \cap B) \cap C}
 		\end{align*}
 		\item Elément neutre : 
 		\begin{align*}
-			A \cup \emptyset = A \\
-            A \cap A = A
+            \boxshadow{A \cup \emptyset = A} \\
+            \boxshadow{A \cap A = A} 
 		\end{align*}
 		\item Intersection d'un ensemble et d'une partie :
 		\begin{align*}
-			A \subset E \iff \ A \cap E = E \cap A = A
+            \boxshadow{A \subset E \iff \ A \cap E = E \cap A = A}
 		\end{align*}
 		\item Commutativité :
 		\begin{align*}
-			A \cup B = B \cup A \\
-			A \cap B = B \cap A
+            \boxshadow{A \cup B = B \cup A} \\
+            \boxshadow{A \cap B = B \cap A}	
 		\end{align*}
 		\item Distributivité :
 		\begin{align*}
-			A \cup (B \cap C) = (A \cup B) \cap (A \cup C) \\
-			A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+            \boxshadow{A \cup (B \cap C) = (A \cup B) \cap (A \cup C)} \\
+            \boxshadow{A \cap (B \cup C) = (A \cap B) \cup (A \cap C)}	
 		\end{align*}
 	\end{enumerate}
 \end{proposition}
@@ -89,7 +89,7 @@
 \begin{definitionbox}
     \begin{definition}[Complémentaire d'un ensemble]
 	\begin{align*}
-		E \backslash F = \{\forall x,\ x \in E \text{ et } x \notin F \}
+        \boxshadow{E \backslash F = \{\forall x,\ x \in E \text{ et } x \notin F \}}	
 	\end{align*}
 \end{definition}
 \end{definitionbox}
@@ -117,8 +117,8 @@
 \begin{propositionbox}
     \begin{proposition}[Lois de Morgan] Soient A et B des ensembles.
 	\begin{enumerate}
-		\item \label{prop10_1} $(A \cup B)^C = A^C \cap B^C$
-		\item \label{prop10_2} $(A \cap B)^C = A^C \cup B^C$
+        \item \label{prop10_1} $\boxshadow{(A \cup B)^C = A^C \cap B^C}$
+        \item \label{prop10_2} $\boxshadow{(A \cap B)^C = A^C \cup B^C}$
 	\end{enumerate}
 \end{proposition}
 \end{propositionbox}
@@ -199,9 +199,9 @@
     \begin{definition}[Produit cartésien]
 	Soient E et F des ensembles
 	\begin{align*}
-		&- E \times F = \{(x, y),\ x \in E,\ y \in F\} \\
-		&- E \times E = E^2 \\
-		&- E \times E \times E = E^3
+        &- \boxshadow{E \times F = \{(x, y),\ x \in E,\ y \in F\}} \\
+        &- \boxshadow{E \times E = E^2} \\
+        &- \boxshadow{E \times E \times E = E^3} 
 	\end{align*}
 \end{definition}
 \end{definitionbox}
@@ -216,7 +216,7 @@
     \begin{definition}[Injectivité]
 	Soit $f:E \to F$, on dit que $f$ est injective si pour chaque élément de F, il y a au plus un élément de E qui y est associé. Autrement dit :
 	\begin{align*}
-		\text{f injective} \iff \{\forall (x_1, x_2) \in E^2, f(x_1) = f(x_2) \implies x_1 = x_2\}
+        \boxshadow{\text{f injective} \iff \{\forall (x_1, x_2) \in E^2, f(x_1) = f(x_2) \implies x_1 = x_2\}}	
 	\end{align*}
 \end{definition}
 \end{definitionbox}
@@ -226,7 +226,7 @@
 	Soit $f:E \to F$, on dit que $f$ est surjective si pour chaque élément de F, il y a au moins un élément de E qui y est associé.
 	Autrement dit :
 	\begin{align*}
-		\text{f surjective} \iff \{\forall y \in F, \exists x \in E, y = f(x)\}
+        \boxshadow{\text{f surjective} \iff \{\forall y \in F, \exists x \in E, y = f(x)\}}	
 	\end{align*}
 \end{definition}
 \end{definitionbox}
@@ -236,7 +236,7 @@
 	Soit $f:E \to F$, on dit que $f$ est bijective si elle est injective et surjective, c'est-à-dire que pour chaque élément de F, il y a exactement un élément de E qui y est associé.
 	Autrement dit :
 	\begin{align*}
-		\text{f bijective} \iff \{\forall y \in F, \exists! x \in E, y = f(x)\}
+        \boxshadow{\text{f bijective} \iff \{\forall y \in F, \exists! x \in E, y = f(x)\}}	
 	\end{align*}
 \end{definition}
 \end{definitionbox}
@@ -251,11 +251,11 @@
     \begin{definition}[Fonction réciproque]
 	Soient E et F deux ensembles. Supposons que $f:E \to F$ est une application bijective. On peut définir l'application 
 	\begin{align*}
-		f^{-1} : 
+	    \boxshadow{f^{-1} : 
 		\begin{cases}
 			F &\to E \\
 			y &\mapsto x
-		\end{cases}
+    \end{cases}}
 	\end{align*}
 	comme étant la réciproque de $f$.
 \end{definition}
@@ -272,8 +272,8 @@
     \begin{definition}[Image directe et image réciproque]
 	Soient $f:E \to F$ une application, A une partie de E et B une partie de F. Nous avons :
 	\begin{align*}
-		f(A) = \{f(x), x \in A\} &\text{ : image directe} \\
-		f^{-1}(B) = \{x \in E, f(x) \in B\} &\text{ : image réciproque}
+        \boxshadow{f(A) = \{f(x), x \in A\} \text{ : image directe}} \\
+        \boxshadow{f^{-1}(B) = \{x \in E, f(x) \in B\} \text{ : image réciproque}}	
 	\end{align*}
 \end{definition}
 \end{definitionbox}
@@ -282,11 +282,11 @@
     \begin{proposition}[Propriétés sur les images directes et réciproques]
 	Soient $f:E \to F$ une application et A, B des parties de F.
 	\begin{enumerate}
-		\item \label{prop_img_1} $f^{-1}(F \backslash A) = E \backslash f^{-1}(A)$
-		\item \label{prop_img_2} $f^{-1}(A \cup B) = f^{-1}(A) \cup f^{-1}(B)$
-		\item \label{prop_img_3} $f^{-1}(A \cap B) = f^{-1}(A) \cap f^{-1}(B)$
-		\item \label{prop_img_4} $f(A \cup B) = f(A) \cup f(B)$
-		\item \label{prop_img_5} $f(A \cap B) \subset f(A) \cap f(B)$
+        \item \label{prop_img_1} $\boxshadow{f^{-1}(F \backslash A) = E \backslash f^{-1}(A)}$
+        \item \label{prop_img_2} $\boxshadow{f^{-1}(A \cup B) = f^{-1}(A) \cup f^{-1}(B)}$
+        \item \label{prop_img_3} $\boxshadow{f^{-1}(A \cap B) = f^{-1}(A) \cap f^{-1}(B)}$
+        \item \label{prop_img_4} $\boxshadow{f(A \cup B) = f(A) \cup f(B)}$
+        \item \label{prop_img_5} $\boxshadow{f(A \cap B) \subset f(A) \cap f(B)}$
 	\end{enumerate}
 \end{proposition}
 \end{propositionbox}

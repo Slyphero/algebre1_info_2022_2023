@@ -23,7 +23,7 @@
 \usepackage{lastpage}
 \usepackage{tcolorbox}
 \usepackage{stmaryrd}
-\tcbuselibrary{skins}
+\tcbuselibrary{skins, listings, theorems}
 \usepackage{endnotes}
 \usepackage{titlesec}
 
@@ -76,6 +76,10 @@ colback=gray!15!white, colframe=black, boxrule=0.3mm, arc=0mm, outer arc=0mm}
 
 \newtcolorbox{leftstroke}[1][]{%
 enhanced, frame hidden, borderline west={0.3mm}{0mm}{black}, colback=white, #1, top=0pt, bottom=0pt, left=2pt}
+
+\newcommand*{\boxshadow}{%
+    \tcboxmath[colback=white, colframe=black, sharp corners, left=1pt, right=1pt, top=1pt, bottom=1pt, boxrule=1pt, enhanced, shadow={0.65mm}{-0.65mm}{0mm}{black}]%
+}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
