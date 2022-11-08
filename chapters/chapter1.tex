@@ -1,99 +1,92 @@
 \chapter{Calcul Algébrique}
 \section{Point sur les ensembles de nombres}
 
-\begin{definitionbox}
+
 \begin{definition}[Ensemble des nombres entiers naturels]
 	\begin{align*}
-        \boxshadow{\N = \{0; 1; ...\}}
+        \N = \{0; 1; ...\}
     \end{align*}
 \end{definition}
-\end{definitionbox}
 
-\begin{definitionbox}
-    \begin{definition}[Ensemble des nombres entiers relatifs]
+\begin{definition}[Ensemble des nombres entiers relatifs]
 	\begin{align*}
-        \boxshadow{\Z = \{...; -1; 0; 1; ...\}}
+        \Z = \{...; -1; 0; 1; ...\}
     \end{align*}
 \end{definition}
-\end{definitionbox}
 
-\begin{definitionbox}
-    \begin{definition}[Ensemble des nombres rationnels]
+
+\begin{definition}[Ensemble des nombres rationnels]
 	\begin{align*}
-        \boxshadow{\Q = \left\{\frac{a}{b} \mid a \in \Z, b \in \N^* \right\}}
+        \Q = \left\{\frac{a}{b} \mid a \in \Z, b \in \N^* \right\}
 	\end{align*}
 \end{definition}
-\end{definitionbox}
 
-\begin{definitionbox}
+
 \begin{definition}{Ensemble des nombres réels}
 	\begin{align*}
-        \boxshadow{\R = ]-\infty; +\infty[}	
+        \R = ]-\infty; +\infty[	
 	\end{align*}
 \end{definition}
-\end{definitionbox}
 
 \subsection{Axiomatique}
 Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 
-\begin{propositionbox}
+
     \begin{proposition}[Loi de composition +]~
 	\begin{enumerate}
 		\item Associativité :
 		\begin{align*}
-            \boxshadow{\forall(a, b, c) \in \K^3,\ a + (b + c) = (a + b) + c}	
+            \forall(a, b, c) \in \K^3,\ a + (b + c) = (a + b) + c	
 		\end{align*}
 		\item Commutativité :
 		\begin{align*}
-            \boxshadow{\forall(a, b) \in \K^2,\ a + b = b + a}	
+            \forall(a, b) \in \K^2,\ a + b = b + a
 		\end{align*}
 		\item Existence d'un élément neutre : 
 		\begin{align*}
-            \boxshadow{\forall a \in \K,\ a + 0 = a}	
+            \forall a \in \K,\ a + 0 = a
 		\end{align*}
 		\item Symétrie :
 		\begin{align*}
-            \boxshadow{\forall(a, a') \in \K^2,\ a + a' = 0 \textnormal{ avec } a' = -a}	
+            \forall(a, a') \in \K^2,\ a + a' = 0 \textnormal{ avec } a' = -a
 		\end{align*}
 		Remarque : Cette propriété ne s'applique pas dans $\N$
 	\end{enumerate}
 \end{proposition}
-\end{propositionbox}
 
-\begin{propositionbox}
     \begin{proposition}[Loi de composition $\cdot$]~
 	\begin{enumerate}
 		\item Associativité :
 		\begin{align*}
-            \boxshadow{\forall (a, b, c) \in \K^3,\ (a \cdot b) \cdot c = a \cdot (b \cdot c)}	
+           \forall (a, b, c) \in \K^3,\ (a \cdot b) \cdot c = a \cdot (b \cdot c) 
 		\end{align*}
 		\item Commutativité :
 		\begin{align*}
-            \boxshadow{\forall (a, b) \in \K^3,\ a \cdot b = b \cdot a}	
+            \forall (a, b) \in \K^3,\ a \cdot b = b \cdot a
 		\end{align*}
 		\item Existence d'un élément neutre : $\forall a \in \K$
 		\begin{align*}
-              & \boxshadow{a \cdot 1 = a} \\
-              & \boxshadow{a \cdot 0 = 0}
+              &a \cdot 1 = a\\
+              & a \cdot 0 = 0
 		\end{align*}
 		\item Distributivité : $\forall (a, b, c) \in \K^3$
 		\begin{align*}
-             &\boxshadow{a \cdot (b + c) = a \cdot b + a \cdot c} \\
-             & \boxshadow{(a + b) \cdot c = a \cdot c + b \cdot c}
+             &a \cdot (b + c) = a \cdot b + a \cdot c \\
+             &(a + b) \cdot c = a \cdot c + b \cdot c
 		\end{align*}
 	\end{enumerate}
 \end{proposition}
-\end{propositionbox}
+
 
 \section{Opérations sur les fractions}
 
-\begin{propositionbox}
+
     \begin{proposition}[Addition sur les fractions]
 	\begin{align*}
-        \boxshadow{\forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}}	
+        \forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}	
 	\end{align*}
 \end{proposition}
-\end{propositionbox}
+
 
 \begin{proof}~
 	\\
@@ -144,13 +137,13 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 	\end{align*}
 \end{proof}
 
-\begin{propositionbox}
+
 \begin{proposition}[Multiplication sur les fractions]
 	\begin{align*}
-        \boxshadow{\forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}}	
+        \forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}	
 	\end{align*}
 \end{proposition}
-\end{propositionbox}
+
 
 \begin{proof}~
 	\\
@@ -199,32 +192,30 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 \end{proof}
 \section{Sommes}
 
-\begin{definitionbox}
+
     \begin{definition}[Définition de la somme]
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k \in \R, \ m \leq k \leq n$
 	\begin{align*}
-        \boxshadow{\sum_{k = m}^{n}a_k = a_m + a_{m+1} + \cdots + a_n}	
+        \sum_{k = m}^{n}a_k = a_m + a_{m+1} + \cdots + a_n	
 	\end{align*}
 \end{definition}
-\end{definitionbox}
 
-\begin{leftstroke}
+
 \begin{remarque}
 	L'indice de sommation est important car :
 	\begin{align*}
 		\sum_{k = m}^{n}a_l = \underbrace{a_l + a_l + \cdots + a_l}_{n - m + 1 \textnormal{termes}} = (n - m + 1)a_l
 	\end{align*}
 \end{remarque}
-\end{leftstroke}
 
-\begin{propositionbox}
+
     \begin{proposition}[Linéarité de la somme]
 	$\forall m, n \in \N \textnormal{ avec } m \leq n$ et $a_k, b_k \in \R, \ m \leq k \leq n$
 	\begin{align*}
-        \boxshadow{\sum_{k = m}^{n} (a_k + b_k) = \sum_{k=m}^{n}a_k + \sum_{k=m}^{n}b_k}	
+        \sum_{k = m}^{n} (a_k + b_k) = \sum_{k=m}^{n}a_k + \sum_{k=m}^{n}b_k	
 	\end{align*}
 \end{proposition}
-\end{propositionbox}
+
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, b_k \in \R, \ m \leq k \leq n$
 	\begin{align*}
@@ -234,14 +225,14 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 	\end{align*}
 \end{proof}
 
-\begin{propositionbox}
+
     \begin{proposition}[Linéarité de la multiplication de la somme par une constante]
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, \lambda \in \R, \ m \leq k \leq n$
 	\begin{align*}
-        \boxshadow{\sum_{k = m}^{n} (\lambda a_k) = \lambda \sum_{k = m}^{n} a_k}	
+        \sum_{k = m}^{n} (\lambda a_k) = \lambda \sum_{k = m}^{n} a_k	
 	\end{align*}
 \end{proposition}
-\end{propositionbox}
+
 
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, \lambda \in \R, \ m \leq k \leq n$
@@ -308,14 +299,14 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 \end{proof}
 
 \subsection{Sommes téléscopiques}
-\begin{propositionbox}
+
     \begin{proposition}[Somme téléscopique]
 	$\forall m, n \in \N \textnormal{ avec }m \leq n,\ a_{k}  \in \R \textnormal{ avec } m \leq k \leq n$
 	\begin{align*}
-        \boxshadow{\sum_{k = m}^{n} (a_k - a_{k-1}) = a_n - a_{m - 1} }
+        \sum_{k = m}^{n} (a_k - a_{k-1}) = a_n - a_{m - 1} 
 	\end{align*}
 \end{proposition}
-\end{propositionbox}
+
 
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec }m \leq n,\ a_{k}  \in \R \textnormal{ avec } m \leq k \leq n$
@@ -337,27 +328,27 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 
 \section{Puissances}
 
-\begin{propositionbox}
+
     \begin{definition}[Puissance d'un réel]
 	$\forall a \in \R,\ \forall n \in \N$
 	\begin{align*}
-        \boxshadow{a^n = \underbrace{a \times a \times \cdots \times a}_{n fois}}	
+        a^n = \underbrace{a \times a \times \cdots \times a}_{n fois}	
 	\end{align*}
 \end{definition}
-\end{propositionbox}
 
-\begin{propositionbox}
+
+
     \begin{proposition}[Propriétés des puissances]
 	$\forall a \in \R,\ \forall m, n \in \N$
 	\begin{enumerate}
-        \item \label{1.4_power1} $\boxshadow{a^m \times a^n = a^{m + n}}$
-        \item \label{1.4_power2} $\boxshadow{(a^m)^n = a^{mn}}$
-        \item \label{1.4_power3} $\boxshadow{\displaystyle{\frac{a^n}{a^m}} = a^{n - m}, a \neq 0}$
-        \item \label{1.4_power4} $\boxshadow{a^{-m} = \displaystyle{\frac{1}{a^m}}, a \neq 0}$
-        \item \label{1.4_power5} $\boxshadow{a^0 = 1}$
+        \item \label{1.4_power1} $a^m \times a^n = a^{m + n}$
+        \item \label{1.4_power2} $(a^m)^n = a^{mn}$
+        \item \label{1.4_power3} $\displaystyle{\frac{a^n}{a^m}} = a^{n - m}, a \neq 0$
+        \item \label{1.4_power4} $a^{-m} = \displaystyle{\frac{1}{a^m}}, a \neq 0$
+        \item \label{1.4_power5} $a^0 = 1$
 	\end{enumerate}
 \end{proposition}
-\end{propositionbox}
+
 \begin{proof}
 	\ref{1.4_power1} $\forall a \in \R,\ \forall n, m \in \N$
 	\begin{align*}

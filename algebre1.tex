@@ -1,53 +1,17 @@
 \documentclass[a4paper, 11pt]{report}
+
 \usepackage[utf8]{inputenc}
 \usepackage[margin=2.5cm]{geometry}
-\usepackage{fancyhdr}
-\usepackage{amsmath, amsfonts, amsthm, amssymb}
+\usepackage{amsmath, amsfonts, amsthm, amssymb, mathtools}
 \usepackage[french]{babel}
-\usepackage{datetime}
-\usepackage{lmodern}
 \usepackage[T1]{fontenc}
-\usepackage{lastpage}
 \usepackage{framed}
 \usepackage[listings]{tcolorbox}
 \usepackage{indentfirst}
 \usepackage{hyperref, xcolor, color}
 \usepackage{graphicx}
-\usepackage{array}
 \usepackage{diagbox}
-\usepackage{multicol}
-\usepackage{blindtext}
-\usepackage{lipsum}
-\usepackage[Lenny]{fncychap}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\usepackage{tcolorbox}
 \usepackage{stmaryrd}
-\tcbuselibrary{skins, listings, theorems}
-\usepackage{endnotes}
-\usepackage{titlesec}
-
-\renewcommand{\chaptermark}[1]{
-\markboth{#1}{}}
-
-\fancypagestyle{IHA-fancy-style}{
-    \fancyhf{}
-    \lhead{\chaptername \ \thechapter \ \leftmark}
-    \rhead{\nouppercase{\rightmark}}
-    \cfoot{\thepage \ / \pageref{LastPage}}
-    \renewcommand{\headrulewidth}{0.5pt}
-    \renewcommand{\footrulewidth}{0.5pt}
-}
-
-\fancypagestyle{plain}{
-    \fancyhf{}
-    \cfoot{\thepage \ / \pageref{LastPage}}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0.5pt}
-}
-\cfoot{\thepage \ / \pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0.5pt}
 
 \newtheorem{definition}{Définition}
 \newtheorem{proposition}{Proposition}
@@ -56,30 +20,6 @@
 \newtheorem{corollaire}{Corollaire}
 \newtheorem{remarque}{Remarque}
 \newtheorem{exemple}{Exemple}
-
-\tcbset{colback=white, arc=0pt, outer arc=0pt}
-
-\newtcolorbox{definitionbox}[1][]{%
-colback=white,colframe=black, boxrule=0.3mm, arc=1mm, outer arc=1mm}
-
-\newtcolorbox{propositionbox}[1][]{%
-colback=gray!15!white,colframe=black, boxrule=0.3mm, arc=1mm, outer arc=1mm}
-
-\newtcolorbox{theoremebox}[1][]{%
-colback=white, colframe=black, boxrule=0.6mm, arc=0mm, outer arc=0mm}
-
-\newtcolorbox{lemmebox}[1][]{%
-colback=gray!15!white, colframe=black, boxrule=0.6mm, arc=0mm, outer arc=0mm}
-
-\newtcolorbox{corollairebox}[1][]{%
-colback=gray!15!white, colframe=black, boxrule=0.3mm, arc=0mm, outer arc=0mm}
-
-\newtcolorbox{leftstroke}[1][]{%
-enhanced, frame hidden, borderline west={0.3mm}{0mm}{black}, colback=white, #1, top=0pt, bottom=0pt, left=2pt}
-
-\newcommand*{\boxshadow}{%
-    \tcboxmath[colback=white, colframe=black, sharp corners, left=1pt, right=1pt, top=1pt, bottom=1pt, boxrule=1pt, enhanced, shadow={0.65mm}{-0.65mm}{0mm}{black}]%
-}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
