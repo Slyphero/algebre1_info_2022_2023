@@ -53,3 +53,22 @@ Soit $(a, b) \in \Z^2 \backslash \{(0, 0)\}$ tel que $ab \neq 0$
 On a : $d \mid a, b \implies |d| \leq m \min (|a|, |b|)$ et $\mathrm{Card}(\mathcal{D}) < \infty$
 Il y a le plus grand élément $\leftarrow$ le plus grand commun diviseur (PGCD)
 \end{definition}
+
+\begin{theoreme}[PPCM]
+Soit $(a, b) \in \Z^* \times \Z^*$ et $m \in \Z,\ a \mid m \text{ et } b \mid m$. Alors $\mathrm{ppcm}(a, b) \mid m$
+\end{theoreme}
+
+\begin{proof}
+Posons $\ell = \mathrm{ppcm}(a, b)$
+\begin{align*}
+\exists ! (q, r) \in \Z^2, \ m &= q\ell + r,\ 0 \leq r < \ell \\
+\iff r &= m - q\ell,\ m \text{ et } \ell \text{ sont multiples de } a \text{ et } 
+\\
+&r \text{ est aussi un multiple de } a \text{ et } b
+\end{align*}
+Par la minimalité de $\ell$, $r = 0 \implies m = q \ell$
+\end{proof}
+
+\begin{theoreme}[PGCD]
+Soit $(a, b) \in \Z^* \times \Z^*$ et $d \in \Z,\ d \mid a \text{ et } d \mid b$. Alors $d \mid \mathrm{pgcd}(a, b)$
+\end{theoreme}
