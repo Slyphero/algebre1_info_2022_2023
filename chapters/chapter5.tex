@@ -120,4 +120,12 @@ Si $r_{n - 2} \neq 0 \implies \exists ! (q_{n - 1}, r_{n - 1}),\ r_{n - 3} = q_{
 \begin{equation*}
 \exists q_n,\ r_{n-2} = q_n r_{n-1}
 \end{equation*}
+\begin{align*}
+\mathrm{pgcd}(a, b) &= \mathrm{pgcd}(b, r) \\
+				   &= \mathrm{pgcd}(r, r_1) \\
+				   &= \mathrm{pgcd}(r_1, r_2) \\
+				   &\vdots \\
+				   &= \mathrm{pgcd}(r_{n-2}, r_{n-1}) \\
+				   &= \mathrm{pgcd}(q_n r_{n-1}, r_{n-1}) = r_{n-1}
+\end{align*}
 \end{proposition}
