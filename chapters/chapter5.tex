@@ -109,4 +109,15 @@ Soient $a \in \Z^*$, $b \in \Z^*$ tel que
 \mathrm{pgcd}(a, b) = \mathrm{pgcd}(b, r)
 \end{equation*}
 Si $r = 0 \implies a = q b,\ \mathrm{pgcd}(a, b) = b$ 
+Supposons que $r = 0$ :
+\begin{equation*}
+\exists ! (q_1, r_1),\ b = q_1 r + r_1, \ 0 \leq r_1 < r
+\end{equation*}
+Si $r_1 \neq 0 \implies \exists ! (q_2, r_2),\ r = q_2 r_1 + r_2,\ 0 \leq r_2 < r_1$ \\
+$\vdots$ \\
+Si $r_{n - 2} \neq 0 \implies \exists ! (q_{n - 1}, r_{n - 1}),\ r_{n - 3} = q_{n-1}r_{n-2} + r_{n - 1},\ 0 \leq r_{n-1} < r_{n-2}$
+
+\begin{equation*}
+\exists q_n,\ r_{n-2} = q_n r_{n-1}
+\end{equation*}
 \end{proposition}
