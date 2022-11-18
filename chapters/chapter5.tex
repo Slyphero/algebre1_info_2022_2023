@@ -13,10 +13,43 @@ On dit que :
 \begin{theoreme}[Division euclidienne]
 Soit $(a, b) \in \Z \times \Z^*$. Alors
 \begin{align*}
-\exists ! (q, r) \in \Z^2, a = bq + r
+\exists ! (q, r) \in \Z^2, a = bq + r,\ (0 \leq r < |b|)
 \end{align*}
 \end{theoreme}
 
 \begin{proof}
+Soit $b > 0$, $\Z = \displaystyle{\bigcup_{k \in \Z}^{}} ([kb, kb + |b|[ \cap \Z)$ On peut écrire la réunion disjointe $\displaystyle{\bigsqcup_{k \in \Z}^{}}$
+Alors 
+\begin{align*}
+\exists ! q \in \Z,\ a \in [qb, qb + |b|[ \iff qb \leq a < qb + |b|
+\\
+0 \leq r = a - qb < |b|
+\end{align*}
+\begin{align*}
+\bigsqcup_{\lambda \in A} A_{\lambda} = \bigcup_{k \in A} A_{\lambda}
+\end{align*}
 
+\begin{align*}
+A_{\lambda} \cap A_{\mu} = \phi,\ \lambda \neq \\
+[2k, 2k+2[,\ b = 2, \ k = 1, 2 \\
+[2, 4[ \cap \Z = \{2,  3\}
+\\
+[4, b[ \cap \Z = \{4, 5\}
+\end{align*}
 \end{proof}
+
+\section{PGCD et PPCM}
+\begin{definition}[PPCM et PGCD]
+Soit $(a, b) \in \Z^2 \backslash \{(0, 0)\}$ tel que $ab \neq 0$
+\begin{align*}
+\mathcal{M} \colon = \left\{ m \in \Z \ | \ a \mid m \text{ et } b \mid m \right\} \Rightarrow \mathcal{M} \neq \phi \text{ car } ab \in \mathcal{M}
+\end{align*}
+\begin{align*}
+\mathcal{M} \cap \N^* \leftarrow \text{ il y a le plus petit commun multiple (PPCM) }
+\end{align*}
+\begin{align*}
+\mathcal{D} = \left\{ d \in \Z \mid d \mid a \text{ et } d \mid b \right\} \Rightarrow \mathcal{D} \neq \emptyset \text{ car } 1 \in \mathcal{D}
+\end{align*}
+On a : $d \mid a, b \implies |d| \leq m \min (|a|, |b|)$ et $\mathrm{Card}(\mathcal{D}) < \infty$
+Il y a le plus grand élément $\leftarrow$ le plus grand commun diviseur (PGCD)
+\end{definition}
