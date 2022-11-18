@@ -16,9 +16,9 @@
 
     \begin{proposition}[Opérations sur les nombres complexes]~
 \begin{enumerate}
-\item Somme : Soient $z = a + ib \in \C, w = c + id \in \C, (a, b, c, d) \in \R^4$
+\item Somme : Soient $z = a + ib \in \C, \omega = c + id \in \C, (a, b, c, d) \in \R^4$
 \begin{align*}
-    z + w = a + c + i (b + d)
+    z + \omega = a + c + i (b + d)
 \end{align*}
 
 \begin{enumerate}
@@ -28,12 +28,12 @@
 \begin{align*}
     z = a + ib \implies -z = -a + i(-b)
 \end{align*}
-\item Commutativité : $z + w = w + z$
+\item Commutativité : $z + \omega = \omega + z$
 \end{enumerate}
 
-\item Produit : Soient $z = a + ib \in \C, w = c + id \in \C, (a, b, c, d) \in \R^4$
+\item Produit : Soient $z = a + ib \in \C, \omega = c + id \in \C, (a, b, c, d) \in \R^4$
 \begin{align*}
-    z \cdot w = (ac - bd) + i(ad + bc)
+    z \cdot \omega = (ac - bd) + i(ad + bc)
 \end{align*}
 
 \begin{enumerate}
@@ -48,13 +48,13 @@
         \end{align*}
     \item Commutativité :
         \begin{align*}
-            z \cdot w = w \cdot z, \forall (z, w) \in \C^2 
+            z \cdot \omega = \omega \cdot z, \forall (z, \omega) \in \C^2 
         \end{align*}
     \item Distributivité :
         \begin{align*}
-        &(z_1 + z_2) \cdot w = z_1 \cdot w + z_2 \cdot w \\
-        &z \cdot (w_1 + w_2) = z \cdot w_1 + z \cdot w_2 \\
-        &\forall (z, z_1, z_2, w, w_1, w_1) \in \C^6
+        &(z_1 + z_2) \cdot \omega = z_1 \cdot \omega + z_2 \cdot \omega \\
+        &z \cdot (\omega_1 + \omega_2) = z \cdot \omega_1 + z \cdot \omega_2 \\
+        &\forall (z, z_1, z_2, \omega, \omega_1, \omega_1) \in \C^6
         \end{align*}
 \end{enumerate}
 
@@ -63,7 +63,7 @@
 
 \begin{proof}{Produit}
 \begin{align*}
-z \cdot w &= (a + ib) \cdot (c + id) \\
+z \cdot \omega &= (a + ib) \cdot (c + id) \\
           &\mlqq=\mrqq a \cdot (c + id) + ib \cdot (c + id) \\
           &\mlqq=\mrqq a \cdot c + a \cdot id + ib \cdot c + ib \cdot id \\
           &\mlqq=\mrqq ac + i(ad) + i(bc) + i^2 bd \\
@@ -253,26 +253,108 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
 
 
     \begin{definition}[Racine n-ième d'un nombre complexe]
-    Soit $z \in \C$. On appelle racine n-ième du nombre complexe $z$ tout nombre complexe $w \in \C$ vérifiant :
+    Soit $z \in \C$. On appelle racine n-ième du nombre complexe $z$ tout nombre complexe $\omega \in \C$ vérifiant :
     \begin{align*}
-        w^n = z 
-    \end{align*}
-    Un complexe non nul $z = \rho e^{i\theta}$ admet n racines n-ièmes données par :
-    \begin{align*}
-        Z_k = \rho^{\frac{1}{n}} e^{i\left(\frac{\theta}{n} + \frac{2k\pi}{n} \right)} 
+        \omega^n = z 
     \end{align*}
 \end{definition}
 
-    \begin{definition}[Racine n-ième de l'unité]
+\begin{proposition}
+Un complexe non nul $z = \rho e^{i\theta}$ ($\rho = |z|$) admet n racines n-ièmes données par :
+    \begin{align*}
+        \omega = \rho^{\frac{1}{n}} e^{i\left(\frac{\theta}{n} + \frac{2k\pi}{n} \right)} 
+    \end{align*}
+\end{proposition}
+
+\begin{proof}
+On cherche à résoudre
+\begin{align*}
+\omega^n = z, \ (n \in \N)
+\end{align*}
+Posons
+\begin{align*}
+\begin{cases}
+\omega = |\omega|e^{i \theta_1} \\
+z = |z| e^{i \theta_2}
+\end{cases} 
+\iff 
+\begin{cases}
+\omega^n = |\omega^n|e^{i n \theta_1} \\
+z = |z| e^{i \theta_2}
+\end{cases}
+\end{align*}
+\\
+Par identification :
+\begin{align*}
+\begin{cases}
+|\omega|^n = |z| \\
+n \theta_1 = \theta_2 + 2k \pi,\ (k \in \Z)
+\end{cases}
+\iff 
+\begin{cases}
+|\omega| = |z|^{\frac{1}{n}} \\
+\theta_1 = \frac{\theta_2}{n} + \frac{2 k \pi}{n},\ (k \in \Z)
+\end{cases}
+\end{align*}
+En posant :
+\begin{align*}
+\begin{cases}
+\rho = |z| \\
+\theta_2 = \theta
+\end{cases}
+\end{align*}
+on obtient :
+\begin{align*}
+\omega = \rho^{\frac{1}{n}} e^{i \left( \frac{\theta}{n} + \frac{2k\pi}{n} \right)},\ (k \in \Z)
+\end{align*}
+\end{proof}
+
+\begin{definition}[Racine n-ième de l'unité]
     On appelle racine n-ième de l'unité, une racine n-ième de 1, on notera $\mathbb{U}_n$ l'ensemble des racines n-ièmes de l'unité :
     \begin{align*}
         \mathbb{U}_n = \{z \in \C | z^n = 1 \} 
     \end{align*}
-    Les racines n-ièmes de l'unité sont de la forme :
+\end{definition}
+
+\begin{proposition}
+Les racines n-ièmes de l'unité sont de la forme :
     \begin{align*}
         \omega_k = e^{\frac{2ik\pi}{n}}, k \in \llbracket 0, n - 1 \rrbracket 
     \end{align*}
-\end{definition}
+\end{proposition}
+
+\begin{proof}
+On cherche à résoudre 
+\begin{align*}
+z^n = 1,\ n \in \N
+\end{align*}
+\\
+Posons $z = |z|e^{i \theta}$. On obtient donc en elevant à la puissance $n$
+\begin{align*}
+z^n = |z^n|e^{i n \theta} &= 1 \\
+\iff |z|^ne^{i n \theta} &= e^{i 0} 
+\end{align*}
+Par identification 
+\begin{align*}
+\begin{cases}
+|z| = 1 \\
+n \theta = 0 + 2 k \pi,\ (k \in \Z)
+\end{cases}
+\end{align*}
+On obtient alors 
+\begin{align*}
+\theta = \frac{2k \pi}{n},\ (k \in \Z)
+\end{align*}
+Finalement on obtient bien 
+\begin{align*}
+z = e^{i \frac{2 k \pi}{n}},\ (k \in \Z)
+\end{align*}
+que l'on peut également écrire 
+\begin{align*}
+z = e^{i \frac{2 k \pi}{n}},\ (k \in \llbracket 0, n - 1 \rrbracket )
+\end{align*}
+car il y a un cycle.
+\end{proof}
 
 \section{Géométrie des nombres complexes}
 \begin{itemize}
@@ -295,18 +377,18 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
 \begin{exemple}
     $z \mapsto \frac{1}{z}$ 
     \\
-    On pose : $w = \frac{1}{z}$
+    On pose : $\omega = \frac{1}{z}$
     \\
-    On a donc : $z = \frac{1}{w}$
+    On a donc : $z = \frac{1}{\omega}$
     \\
-    $z + \overline{z} = 2 \implies \frac{1}{w} + \overline{\frac{1}{w}} = 2 \implies \frac{1}{w} + \frac{1}{\overline{w}} = 2$ \\
-    $w\overline{w} \left( \frac{1}{w} + \frac{1}{\overline{w}} \right) = 2w\overline{w}$
+    $z + \overline{z} = 2 \implies \frac{1}{\omega} + \overline{\frac{1}{\omega}} = 2 \implies \frac{1}{\omega} + \frac{1}{\overline{\omega}} = 2$ \\
+    $\omega\overline{\omega} \left( \frac{1}{\omega} + \frac{1}{\overline{\omega}} \right) = 2\omega\overline{\omega}$
     \\
-    On a donc : $\overline{w} + w = 2w\overline{w} \implies 2w\overline{w} - w - \overline{w} = 0$ 
+    On a donc : $\overline{\omega} + \omega = 2\omega\overline{\omega} \implies 2\omega\overline{\omega} - \omega - \overline{\omega} = 0$ 
     \\
-    C'est à dire : $w\overline{w} - \frac{1}{2}w - \frac{1}{2}\overline{w} = \left( w - \frac{1}{2} \right) \left( \overline{w} - \frac{1}{2} \right) - \frac{1}{4} = 0$
+    C'est à dire : $\omega\overline{\omega} - \frac{1}{2}\omega - \frac{1}{2}\overline{\omega} = \left( \omega - \frac{1}{2} \right) \left( \overline{\omega} - \frac{1}{2} \right) - \frac{1}{4} = 0$
     \\
-    Ce qui équivaut à $\left| w - \frac{1}{2} \right|^2 = \left( \frac{1}{2} \right)^2 \iff \left|w - \frac{1}{2}\right| = \left(\frac{1}{2}\right)$
+    Ce qui équivaut à $\left| \omega - \frac{1}{2} \right|^2 = \left( \frac{1}{2} \right)^2 \iff \left|\omega - \frac{1}{2}\right| = \left(\frac{1}{2}\right)$
 \end{exemple}
 
 
@@ -317,23 +399,23 @@ z \cdot w &= (a + ib) \cdot (c + id) \\
     Déterminer l'image de $P$ par la transformation $z \mapsto \frac{z - i}{z + i}$
     \\
     \begin{enumerate}
-        \item $w = \frac{z - i}{z + i}$, exprimer $z$ en fonction de $w$.
+        \item $\omega = \frac{z - i}{z + i}$, exprimer $z$ en fonction de $\omega$.
             \begin{align*}
-                &w = \frac{z - i}{z + i} \\
-                \iff &w(z + i) = z - i \\
-                \iff &w(z + i) + i = z \\
-                \iff &wz + wi + i = z \\
-                \iff &wz - z = -wi - i \\
-                \iff &z(w + 1) = -wi - i \\
-                \iff &z = \frac{-wi - i}{w + 1} \\
-                \iff &z = \frac{-i(w + 1)}{w + 1} 
+                &\omega = \frac{z - i}{z + i} \\
+                \iff &\omega (z + i) = z - i \\
+                \iff &\omega (z + i) + i = z \\
+                \iff &\omega z + \omega i + i = z \\
+                \iff &\omega z - z = -\omega i - i \\
+                \iff &z(\omega + 1) = -\omega i - i \\
+                \iff &z = \frac{-\omega i - i}{\omega + 1} \\
+                \iff &z = \frac{-i(\omega + 1)}{\omega + 1} 
             \end{align*}
         \item $z \in P \iff \Im{(z)} > 0$ 
             \\
             $z = x + iy$, $\overline{z} = x - iy$, on a : $z - \overline{z} = 2iy$ \\
             Si on a $\Im{(z)} = y > 0 \iff \frac{1}{2i}(z - \overline{z}) > 0$
             \\
-            A la fin on obtient : $w\overline{w} < 1 \implies |w| < 1$
+            A la fin on obtient : $\omega\overline{\omega} < 1 \implies |\omega| < 1$
     \end{enumerate}
 \end{exemple}
 
