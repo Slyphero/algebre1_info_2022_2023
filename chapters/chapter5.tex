@@ -72,3 +72,17 @@ Par la minimalité de $\ell$, $r = 0 \implies m = q \ell$
 \begin{theoreme}[PGCD]
 Soit $(a, b) \in \Z^* \times \Z^*$ et $d \in \Z,\ d \mid a \text{ et } d \mid b$. Alors $d \mid \mathrm{pgcd}(a, b)$
 \end{theoreme}
+
+\begin{proof}
+Posons $m = \mathrm{pgcd}(a, b)$. Il suffit de montrer que 
+\begin{align*}
+\mathrm{pgcd}(m, d) = m
+\end{align*}
+Soit $\ell = \mathrm{ppcm}(m ,d)$, $a$ et $b$ sont multiples de $m$ et $d$
+\\
+D'après le théorème précédent : 
+\begin{align*}
+\ell \mid a \text{ et } \ell \mid b
+\end{align*}
+\end{proof}
+
