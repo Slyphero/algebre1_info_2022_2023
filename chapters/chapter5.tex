@@ -15,27 +15,55 @@ Soit $(a, b) \in \Z \times \Z^*$. Alors
 \begin{align*}
 \exists ! (q, r) \in \Z^2, a = bq + r,\ (0 \leq r < |b|)
 \end{align*}
+\textbf{Vocabulaire :}
+\begin{itemize}
+\item $a$ est appelé le \textit{dividende}
+\item $b$ est appelé le \textit{diviseur}
+\item $q$ est appelé le \textit{quotient}
+\item $r$ est appelé le \textit{reste}
+\end{itemize}
 \end{theoreme}
 
 \begin{proof}
-Soit $b > 0$, $\Z = \displaystyle{\bigcup_{k \in \Z}^{}} ([kb, kb + |b|[ \cap \Z)$ On peut écrire la réunion disjointe $\displaystyle{\bigsqcup_{k \in \Z}^{}}$
-Alors 
-\begin{align*}
-\exists ! q \in \Z,\ a \in [qb, qb + |b|[ \iff qb \leq a < qb + |b|
+Nous devons montrer deux choses, \textit{l'existence} et \textit{l'unicité} du couple $(q, r)$
+\begin{enumerate}
+\item \textbf{Existence}
 \\
-0 \leq r = a - qb < |b|
-\end{align*}
-\begin{align*}
-\bigsqcup_{\lambda \in A} A_{\lambda} = \bigcup_{k \in A} A_{\lambda}
-\end{align*}
-
-\begin{align*}
-A_{\lambda} \cap A_{\mu} = \phi,\ \lambda \neq \\
-[2k, 2k+2[,\ b = 2, \ k = 1, 2 \\
-[2, 4[ \cap \Z = \{2,  3\}
+Supposons $a \in \N$ et considérons $M = \left\{ n \in \N \mid nb \leq a \right\}$ l'ensemble des multiples de $b$ inférieurs à $a$. $M$ est une partie de $\N$.
+Nous avons deux propriétés :
+\begin{enumerate}
+\item $M$ est non vide car $0$ est un multiple de $b$ inférieur à $a$
+\item $M$ est majoré par $a$ d'après sa définition.
+\end{enumerate}
+Ainsi, $M$ admet un plus grand élément que l'on notera $q$, vérifiant :
+\begin{enumerate}
+\item $qb \leq a$ car $q \in M$
+\item $(q+1) b > a$ car $q + 1 > q$ sachant que $q$ est le plus grand élément de $M$, $q + 1 \notin M$.
+\end{enumerate}
+Posons $r = a - bq \Longleftrightarrow a = bq + r$.
+Sachant que $a \geq bq$, $r \geq 0$. 
 \\
-[4, b[ \cap \Z = \{4, 5\}
+On a $r < b$ car $b = (q+1)b - qb > a - bq = r$.
+\\
+Supposons que $a \in \Z$. Si $a$ est positif, on se ramène au cas précédent.
+\\
+Dans le cas où $a < 0$, $-a \geq 0$, ainsi, $\exists (q', r') \in \Z^2$ tel que 
+\begin{align*}
+-a &= bq' + r' \text{ avec } 0 \leq r' < |b| \\
+\iff a &= b(-q') -r'
 \end{align*}
+Si $r' = 0$, on pose $q = -q'$ et $r = 0$ et on obtient le couple recherché. 
+\\
+Si $r' \neq 0$, $r' \in \llbracket 1, b - 1 \rrbracket$  et $a = b(-q' - 1) + (b - r')$, on pose $q = -q' - 1$ et $r = b - r'$ et on obtient le couple recherché.
+\item \textbf{Unicité} \\
+Pour cette partie, il suffit de supposer deux couples $(q, r) \in \Z^2$ et $(q', r') \in \Z^2$ et de montrer que $q = q'$ et $r = r'$.
+\\
+Commençons par $a = bq + r,\ (0 \leq r < |b|)$ et $a = bq' + r',\ (0 \leq r' < |b|)$. Comme $0 \leq r < b$ et $0 \leq r' < b$, on a : 
+\begin{align*}
+b|q' - q| = |r' - r| < b
+\end{align*}
+ce qui n'est possible que si $|q' - q| = 0$ ce qui implique que $q = q'$. Ceci entraîne donc $r = r'$ et donc on a montré que $(q, r) = (q', r')$
+\end{enumerate}
 \end{proof}
 
 \section{PGCD et PPCM}
