@@ -2,36 +2,43 @@
 \section{Point sur les ensembles de nombres}
 
 
+\begin{graybox}
 \begin{definition}[Ensemble des nombres entiers naturels]
 	\begin{align*}
         \N = \{0; 1; ...\}
     \end{align*}
 \end{definition}
+\end{graybox}
 
+\begin{graybox}
 \begin{definition}[Ensemble des nombres entiers relatifs]
 	\begin{align*}
         \Z = \{...; -1; 0; 1; ...\}
     \end{align*}
 \end{definition}
+\end{graybox}
 
-
+\begin{graybox}
 \begin{definition}[Ensemble des nombres rationnels]
 	\begin{align*}
         \Q = \left\{\frac{a}{b} \mid a \in \Z, b \in \N^* \right\}
 	\end{align*}
 \end{definition}
+\end{graybox}
 
-
+\begin{graybox}
 \begin{definition}{Ensemble des nombres réels}
 	\begin{align*}
         \R = ]-\infty; +\infty[	
 	\end{align*}
 \end{definition}
+\end{graybox}
 
 \subsection{Axiomatique}
 Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 
 
+    \begin{graybox}
     \begin{proposition}[Loi de composition +]~
 	\begin{enumerate}
 		\item Associativité :
@@ -53,7 +60,9 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 		Remarque : Cette propriété ne s'applique pas dans $\N$
 	\end{enumerate}
 \end{proposition}
+    \end{graybox}
 
+    \begin{graybox}
     \begin{proposition}[Loi de composition $\cdot$]~
 	\begin{enumerate}
 		\item Associativité :
@@ -76,17 +85,18 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 		\end{align*}
 	\end{enumerate}
 \end{proposition}
+    \end{graybox}
 
 
 \section{Opérations sur les fractions}
 
-
-    \begin{proposition}[Addition sur les fractions]
-	\begin{align*}
-        \forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}	
-	\end{align*}
-\end{proposition}
-
+\begin{graybox}
+	\begin{proposition}[Addition sur les fractions]
+		\begin{align*}
+			\forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}	
+		\end{align*}
+	\end{proposition}
+\end{graybox}
 
 \begin{proof}~
 	\\
@@ -137,13 +147,13 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 	\end{align*}
 \end{proof}
 
-
-\begin{proposition}[Multiplication sur les fractions]
-	\begin{align*}
-        \forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}	
-	\end{align*}
-\end{proposition}
-
+\begin{graybox}
+	\begin{proposition}[Multiplication sur les fractions]
+		\begin{align*}
+			\forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}	
+		\end{align*}
+	\end{proposition}
+\end{graybox}
 
 \begin{proof}~
 	\\
@@ -192,14 +202,14 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 \end{proof}
 \section{Sommes}
 
-
-    \begin{definition}[Définition de la somme]
-	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k \in \R, \ m \leq k \leq n$
-	\begin{align*}
-        \sum_{k = m}^{n}a_k = a_m + a_{m+1} + \cdots + a_n	
-	\end{align*}
-\end{definition}
-
+\begin{graybox}
+	\begin{definition}[Définition de la somme]
+		$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k \in \R, \ m \leq k \leq n$
+		\begin{align*}
+			\sum_{k = m}^{n}a_k = a_m + a_{m+1} + \cdots + a_n	
+		\end{align*}
+	\end{definition}
+\end{graybox}
 
 \begin{remarque}
 	L'indice de sommation est important car :
@@ -208,13 +218,14 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 	\end{align*}
 \end{remarque}
 
-
-    \begin{proposition}[Linéarité de la somme]
-	$\forall m, n \in \N \textnormal{ avec } m \leq n$ et $a_k, b_k \in \R, \ m \leq k \leq n$
-	\begin{align*}
-        \sum_{k = m}^{n} (a_k + b_k) = \sum_{k=m}^{n}a_k + \sum_{k=m}^{n}b_k	
-	\end{align*}
-\end{proposition}
+\begin{graybox}
+	\begin{proposition}[Linéarité de la somme]
+		$\forall m, n \in \N \textnormal{ avec } m \leq n$ et $a_k, b_k \in \R, \ m \leq k \leq n$
+		\begin{align*}
+			\sum_{k = m}^{n} (a_k + b_k) = \sum_{k=m}^{n}a_k + \sum_{k=m}^{n}b_k	
+		\end{align*}
+	\end{proposition}
+\end{graybox}
 
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, b_k \in \R, \ m \leq k \leq n$
@@ -225,14 +236,14 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 	\end{align*}
 \end{proof}
 
-
-    \begin{proposition}[Linéarité de la multiplication de la somme par une constante]
-	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, \lambda \in \R, \ m \leq k \leq n$
-	\begin{align*}
-        \sum_{k = m}^{n} (\lambda a_k) = \lambda \sum_{k = m}^{n} a_k	
-	\end{align*}
-\end{proposition}
-
+\begin{graybox}
+	\begin{proposition}[Linéarité de la multiplication de la somme par une constante]
+		$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, \lambda \in \R, \ m \leq k \leq n$
+		\begin{align*}
+			\sum_{k = m}^{n} (\lambda a_k) = \lambda \sum_{k = m}^{n} a_k	
+		\end{align*}
+	\end{proposition}
+\end{graybox}
 
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec } m \leq n \textnormal{ et } a_k, \lambda \in \R, \ m \leq k \leq n$
@@ -300,13 +311,14 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 
 \subsection{Sommes téléscopiques}
 
-    \begin{proposition}[Somme téléscopique]
-	$\forall m, n \in \N \textnormal{ avec }m \leq n,\ a_{k}  \in \R \textnormal{ avec } m \leq k \leq n$
-	\begin{align*}
-        \sum_{k = m}^{n} (a_k - a_{k-1}) = a_n - a_{m - 1} 
-	\end{align*}
-\end{proposition}
-
+\begin{graybox}
+	\begin{proposition}[Somme téléscopique]
+		$\forall m, n \in \N \textnormal{ avec }m \leq n,\ a_{k}  \in \R \textnormal{ avec } m \leq k \leq n$
+		\begin{align*}
+			\sum_{k = m}^{n} (a_k - a_{k-1}) = a_n - a_{m - 1} 
+		\end{align*}
+	\end{proposition}
+\end{graybox}
 
 \begin{proof}
 	$\forall m, n \in \N \textnormal{ avec }m \leq n,\ a_{k}  \in \R \textnormal{ avec } m \leq k \leq n$
@@ -328,26 +340,27 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 
 \section{Puissances}
 
+\begin{graybox}
+	\begin{definition}[Puissance d'un réel]
+		$\forall a \in \R,\ \forall n \in \N$
+		\begin{align*}
+			a^n = \underbrace{a \times a \times \cdots \times a}_{n fois}	
+		\end{align*}
+	\end{definition}
+\end{graybox}
 
-    \begin{definition}[Puissance d'un réel]
-	$\forall a \in \R,\ \forall n \in \N$
-	\begin{align*}
-        a^n = \underbrace{a \times a \times \cdots \times a}_{n fois}	
-	\end{align*}
-\end{definition}
-
-
-
-    \begin{proposition}[Propriétés des puissances]
-	$\forall a \in \R,\ \forall m, n \in \N$
-	\begin{enumerate}
-        \item \label{1.4_power1} $a^m \times a^n = a^{m + n}$
-        \item \label{1.4_power2} $(a^m)^n = a^{mn}$
-        \item \label{1.4_power3} $\displaystyle{\frac{a^n}{a^m}} = a^{n - m}, a \neq 0$
-        \item \label{1.4_power4} $a^{-m} = \displaystyle{\frac{1}{a^m}}, a \neq 0$
-        \item \label{1.4_power5} $a^0 = 1$
-	\end{enumerate}
-\end{proposition}
+\begin{graybox}
+	\begin{proposition}[Propriétés des puissances]
+		$\forall a \in \R,\ \forall m, n \in \N$
+		\begin{enumerate}
+			\item \label{1.4_power1} $a^m \times a^n = a^{m + n}$
+			\item \label{1.4_power2} $(a^m)^n = a^{mn}$
+			\item \label{1.4_power3} $\displaystyle{\frac{a^n}{a^m}} = a^{n - m}, a \neq 0$
+			\item \label{1.4_power4} $a^{-m} = \displaystyle{\frac{1}{a^m}}, a \neq 0$
+			\item \label{1.4_power5} $a^0 = 1$
+		\end{enumerate}
+	\end{proposition}
+\end{graybox}
 
 \begin{proof}
 	\ref{1.4_power1} $\forall a \in \R,\ \forall n, m \in \N$

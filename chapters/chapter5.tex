@@ -1,5 +1,6 @@
 \chapter{Arithmétique}
 \section{Divisibilité}
+\begin{graybox}
 \begin{definition}
 Soient $a \in \Z, b \in \Z^*$. 
 On dit que :
@@ -9,7 +10,9 @@ On dit que :
 \item $b$ divise $a$ $\iff b \mid a$
 \end{itemize}
 \end{definition}
+\end{graybox}
 
+\begin{graybox}
 \begin{theoreme}[Division euclidienne]
 Soit $(a, b) \in \Z \times \Z^*$. Alors
 \begin{align*}
@@ -23,11 +26,14 @@ Soit $(a, b) \in \Z \times \Z^*$. Alors
 \item $r$ est appelé le \textit{reste}
 \end{itemize}
 \end{theoreme}
+\end{graybox}
 
 \begin{proof}\cite{livre_prepa}
 Nous devons montrer deux choses, \textit{l'existence} et \textit{l'unicité} du couple $(q, r)$
 \begin{enumerate}
-\item \textbf{Existence}
+\item \textbf{Existence} 
+\\
+Montrons que $(q, r) \in \Z^2$ existe.
 \\
 Supposons $a \in \N$ et considérons $M = \left\{ n \in \N \mid nb \leq a \right\}$ l'ensemble des multiples de $b$ inférieurs à $a$. $M$ est une partie de $\N$.
 Nous avons deux propriétés :
@@ -67,6 +73,7 @@ ce qui n'est possible que si $|q' - q| = 0$ ce qui implique que $q = q'$. Ceci e
 \end{proof}
 
 \section{PGCD et PPCM}
+\begin{graybox}
 \begin{definition}[PPCM et PGCD]
 Soit $(a, b) \in \Z^2 \backslash \{(0, 0)\}$ tel que $ab \neq 0$
 \begin{align*}
@@ -81,10 +88,13 @@ Soit $(a, b) \in \Z^2 \backslash \{(0, 0)\}$ tel que $ab \neq 0$
 On a : $d \mid a, b \implies |d| \leq m \min (|a|, |b|)$ et $\mathrm{Card}(\mathcal{D}) < \infty$
 Il y a le plus grand élément $\leftarrow$ le plus grand commun diviseur (PGCD)
 \end{definition}
+\end{graybox}
 
+\begin{graybox}
 \begin{theoreme}[PPCM]
 Soit $(a, b) \in \Z^* \times \Z^*$ et $m \in \Z,\ a \mid m \text{ et } b \mid m$. Alors $\mathrm{ppcm}(a, b) \mid m$
 \end{theoreme}
+\end{graybox}
 
 \begin{proof}
 Posons $\ell = \mathrm{ppcm}(a, b)$
@@ -97,9 +107,11 @@ Posons $\ell = \mathrm{ppcm}(a, b)$
 Par la minimalité de $\ell$, $r = 0 \implies m = q \ell$
 \end{proof}
 
+\begin{graybox}
 \begin{theoreme}[PGCD]
 Soit $(a, b) \in \Z^* \times \Z^*$ et $d \in \Z,\ d \mid a \text{ et } d \mid b$. Alors $d \mid \mathrm{pgcd}(a, b)$
 \end{theoreme}
+\end{graybox}
 
 \begin{proof}
 Posons $m = \mathrm{pgcd}(a, b)$. Il suffit de montrer que 
@@ -115,18 +127,23 @@ D'après le théorème précédent :
 Sachant qu'on a $\ell \geq m$ et $\ell \leq m$, on en conclut que $\ell = m$
 \end{proof}
 
+\begin{graybox}
 \begin{theoreme}
 Soit $(a, b) \in (\N^*)^2 \implies ab = \mathrm{pgcd}(a, b)\mathrm{ppcm}(a, b)$
 \end{theoreme}
+\end{graybox}
 
+\begin{graybox}
 \begin{definition}[Nombres premiers entre eux]
 	Soit $(a, b) \in (\Z^*)^2$
 	\begin{align*}
 	a \text{ et } b \text{ premiers entre eux } \iff \mathrm{pgcd}(a, b) = 1
 	\end{align*}
 \end{definition}
+\end{graybox}
 
 \section{Algorithme d'Euclide}
+\begin{graybox}
 \begin{proposition}[Algorithme d'Euclide]
 Soient $a \in \Z^*$, $b \in \Z^*$ tel que 
 \begin{align*}
@@ -157,6 +174,7 @@ Si $r_{n - 2} \neq 0 \implies \exists ! (q_{n - 1}, r_{n - 1}),\ r_{n - 3} = q_{
 				   &= \mathrm{pgcd}(q_n r_{n-1}, r_{n-1}) = r_{n-1}
 \end{align*}
 \end{proposition}
+\end{graybox}
 
 \begin{exemple}~ 
 \begin{enumerate}

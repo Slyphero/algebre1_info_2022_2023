@@ -6,14 +6,16 @@
 
 \section{Vision algébrique des nombres complexes}
 
-
-    \begin{definition}[Forme algébrique des nombres complexes]
+\begin{graybox}
+\begin{definition}[Forme algébrique des nombres complexes]
 \begin{align*}
     \C = \{a + ib \ | \ (a, b) \in \R^2 \}, \text{ avec } i = \sqrt{-1}
 \end{align*}
 \end{definition}
+\end{graybox}
 
 
+    \begin{graybox}
     \begin{proposition}[Opérations sur les nombres complexes]~
 \begin{enumerate}
 \item Somme : Soient $z = a + ib \in \C, \omega = c + id \in \C, (a, b, c, d) \in \R^4$
@@ -60,6 +62,7 @@
 
 \end{enumerate}
 \end{proposition}
+    \end{graybox}
 
 \begin{proof}{Produit}
 \begin{align*}
@@ -76,19 +79,21 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
     $(\C, +, \times)$ est un corps commutatif 
 \end{remarque}
 
-
-
-    \begin{definition}[Conjugué d'un nombre complexe]
+\begin{graybox}
+\begin{definition}[Conjugué d'un nombre complexe]
     Soit $z = a + ib$ un nombre complexe, le nombre $\overline{z} = a - ib$ est dit le conjugué de z.
 \end{definition}
+\end{graybox}
 
-
+\begin{graybox}
 \begin{proposition}{}
     Soient $z = a + ib, z'= a - ib, (a, b) \in \R^2, z \in \C$
     \begin{align*}
         z \cdot z' = a^2 + b^2 
     \end{align*}
 \end{proposition}
+\end{graybox}
+
 \begin{proof}
         \begin{align*}
             z \cdot z' &= (a + ib)(a - ib) \\
@@ -97,17 +102,17 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
         \end{align*}
     \end{proof}
 
-
-
-    \begin{definition}[Module d'un nombre complexe]
+\begin{graybox}
+\begin{definition}[Module d'un nombre complexe]
     Soit $z = a + ib$ un nombre complexe, on définit son module comme étant :
     \begin{align*}
         |z| = \sqrt{a^2 + b^2} 
     \end{align*}
 \end{definition}
+\end{graybox}
 
-
-    \begin{proposition}[Propriétés des modules]
+\begin{graybox}
+\begin{proposition}[Propriétés des modules]
     Soient $z = a + ib$ et $z = a' + ib'$ des nombres complexes, on a les propriétés suivantes sur les modules :
     \begin{itemize}
         \item $|z \cdot z'| = |z| \cdot |z'|$
@@ -119,31 +124,36 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
         \item $|z| = |\overline{z}| = |-z| = |-\overline{z}|$
     \end{itemize}
 \end{proposition}
+\end{graybox}
 
-
-    \begin{definition}[Partie réelle et partie imaginaire]
+\begin{graybox}
+\begin{definition}[Partie réelle et partie imaginaire]
     Soit $z = a + ib \in \C, (a, b) \in \R^2$
     \begin{align*}
         &\Re(z) = Re(z) = a \text{ (Partie réelle)} \\
         &\Im(z) = Im(z) = b \text{ (Partie imaginaire)}
     \end{align*}
 \end{definition}
+\end{graybox}
 
 
+\begin{graybox}
 \begin{proposition}~
     \begin{itemize}
         \item $z + \overline{z} = (a + ib) + (a - ib) = 2a \implies \Re(z) = \dfrac{z + \overline{z}}{2}$
         \item $z - \overline{z} = (a + ib) - (a - ib) = 2ib \implies \Im(z) = \dfrac{z - \overline{z}}{2i}$
     \end{itemize}
 \end{proposition}
+\end{graybox}
 \section{Vision géométrique des nombres complexes}
-
-    \begin{definition}[Argument d'un nombre complexe]
+\begin{graybox}
+\begin{definition}[Argument d'un nombre complexe]
     Soit $z$ un nombre complexe, l'argument de $z$, noté $\arg{(z)}$ représente l'angle entre la droite des réels et celle issue de l'origine et passant par $z$.
 \end{definition}
+\end{graybox}
 
-
-    \begin{proposition}[Propriétés des arguments]
+\begin{graybox}
+\begin{proposition}[Propriétés des arguments]
     Soient $z, z_1, z_2 \in \C^3, n \in \N$
     \begin{itemize}
         \item $\arg{(z_1 \cdot z_2)} = \arg{z_1} + \arg{z_2}$
@@ -152,9 +162,10 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
         \item $\arg{\frac{1}{z}} = -\arg{z}$
     \end{itemize}
 \end{proposition}
+\end{graybox}
 
-
-    \begin{definition}[Forme trigonométrique d'un nombre complexe]
+\begin{graybox}
+\begin{definition}[Forme trigonométrique d'un nombre complexe]
     Soit $z$ un nombre complexe, on peut l'écrire sous sa forme trigonométrique ainsi :
     \begin{align*}
         z = r (\cos{(\theta)} + i \sin{(\theta)}) 
@@ -165,8 +176,9 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
         \item $\theta = \arg{(z)}$
     \end{itemize}
 \end{definition}
+\end{graybox}
 
-
+\begin{graybox}
 \begin{proposition}{}
     Soient $z_1 = r_1(\cos{(\theta_1)} + i \sin{(\theta_1)})$ et $z_2 = r_2(\cos{(\theta_2)} + i\sin{(\theta_2)})$, deux nombres complexes. Nous avons la propriété suivante :
     \begin{align*}
@@ -174,6 +186,7 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
     \end{align*}
 
 \end{proposition}
+\end{graybox}
 \begin{proof}
         \begin{align*}
             z_1 z_2 &= (r_1(\cos{(\theta_1)} + i \sin{(\theta_1)}) (r_2(\cos{(\theta_2)}+i \sin{(\theta_2)}) \\
@@ -185,32 +198,40 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
         \end{align*}
     \end{proof}
 
+    \begin{graybox}
     \begin{proposition}[Formule de Moivre]
     \begin{align*}
         (\cos{\theta} + i \sin{\theta})^n = \cos{(n\theta)} + i\sin{(n\theta)} 
     \end{align*}
 \end{proposition}
+    \end{graybox}
 
 
+    \begin{graybox}
     \begin{definition}[Forme exponentielle d'un nombre complexe]
     On peut écrire un nombre complexe sous une forme exponentielle :
     \begin{align*}
         z = r(\cos{\theta} + i\sin{\theta}) = re^{i\theta}
     \end{align*}
 \end{definition}
+    \end{graybox}
 
 
+    \begin{graybox}
     \begin{proposition}[Identité d'Euler]
     \begin{align*}
         e^{i \pi} = -1 
     \end{align*}
 \end{proposition}
+    \end{graybox}
 
+    \begin{graybox}
     \begin{proposition}[Formules d'Euler]
     \begin{align*}
         \cos{\theta} &= \frac{e^{i\theta} + e^{-i\theta}}{2} & \sin{\theta} &= \frac{e^{i\theta} - e^{-i\theta}}{2i}
     \end{align*}
 \end{proposition}
+    \end{graybox}
 \begin{proof}
         \begin{align*}
             e^{i\theta} + e^{-i\theta} &= (\cos{\theta} + i\sin{\theta}) + (\cos{\theta} - i\sin{\theta}) \\
@@ -252,19 +273,23 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
 
 
 
+    \begin{graybox}
     \begin{definition}[Racine n-ième d'un nombre complexe]
     Soit $z \in \C$. On appelle racine n-ième du nombre complexe $z$ tout nombre complexe $\omega \in \C$ vérifiant :
     \begin{align*}
         \omega^n = z 
     \end{align*}
 \end{definition}
+    \end{graybox}
 
+\begin{graybox}
 \begin{proposition}
 Un complexe non nul $z = \rho e^{i\theta}$ ($\rho = |z|$) admet n racines n-ièmes données par :
     \begin{align*}
         \omega = \rho^{\frac{1}{n}} e^{i\left(\frac{\theta}{n} + \frac{2k\pi}{n} \right)} 
     \end{align*}
 \end{proposition}
+\end{graybox}
 
 \begin{proof}
 On cherche à résoudre
@@ -309,19 +334,23 @@ on obtient :
 \end{align*}
 \end{proof}
 
+\begin{graybox}
 \begin{definition}[Racine n-ième de l'unité]
     On appelle racine n-ième de l'unité, une racine n-ième de 1, on notera $\mathbb{U}_n$ l'ensemble des racines n-ièmes de l'unité :
     \begin{align*}
         \mathbb{U}_n = \{z \in \C | z^n = 1 \} 
     \end{align*}
 \end{definition}
+\end{graybox}
 
+\begin{graybox}
 \begin{proposition}
 Les racines n-ièmes de l'unité sont de la forme :
     \begin{align*}
         \omega_k = e^{\frac{2ik\pi}{n}}, k \in \llbracket 0, n - 1 \rrbracket 
     \end{align*}
 \end{proposition}
+\end{graybox}
 
 \begin{proof}
 On cherche à résoudre 

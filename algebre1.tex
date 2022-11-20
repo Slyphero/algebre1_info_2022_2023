@@ -6,7 +6,7 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{framed}
-\usepackage[listings]{tcolorbox}
+\usepackage[listings, skins, breakable]{tcolorbox}
 \usepackage{indentfirst}
 \usepackage{hyperref, xcolor, color}
 \usepackage{graphicx}
@@ -15,6 +15,25 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{indentfirst}
+\usepackage[Lenny]{fncychap}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\fancypagestyle{fancy}{
+\fancyhf{}
+\rhead{Algèbre 1 - Informatique}
+\lhead{Année scolaire 2022-2023}
+\renewcommand{\footrulewidth}{0.25pt}
+\cfoot{\thepage \  / \pageref{LastPage}}
+}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\cfoot{\thepage \  / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.25pt}
+}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Définition}[section]
@@ -32,6 +51,8 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\K}{\mathbb{K}}
 
+\newtcolorbox{graybox}{breakable, enhanced, colframe=white, colback=gray!20!white, arc=0mm, outer arc=0mm}
+
 \DeclareMathSymbol{\mlqq}{\mathrel}{operators}{"5C}
 \DeclareMathSymbol{\mrqq}{\mathrel}{operators}{`"}
 
@@ -43,10 +64,11 @@
 \author{}
 
 \begin{document}
+	
 	\maketitle
 	\tableofcontents
 	\clearpage
-	
+	\pagestyle{fancy}
 	\include{chapters/chapter1.tex}
 	\include{chapters/chapter2.tex}
 	\include{chapters/chapter3.tex}
@@ -54,5 +76,5 @@
 	\include{chapters/chapter5.tex}
 	
 	\bibliographystyle{plain}
-	\bibliography{refs}
+	\bibliography{refs} 
 \end{document}
