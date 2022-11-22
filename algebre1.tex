@@ -6,7 +6,7 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{framed}
-\usepackage[listings, skins, breakable]{tcolorbox}
+\usepackage[listings, skins, breakable, hooks]{tcolorbox}
 \usepackage{indentfirst}
 \usepackage{hyperref, xcolor, color}
 \usepackage{graphicx}
@@ -16,6 +16,14 @@
 \usepackage{subcaption}
 \usepackage{indentfirst}
 \usepackage[Lenny]{fncychap}
+
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
 
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -64,6 +72,10 @@
 \author{}
 
 \begin{document}
+
+	\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{qqqqff}{rgb}{0,0,1}
 	
 	\maketitle
 	\tableofcontents

@@ -164,6 +164,38 @@ z \cdot \omega &= (a + ib) \cdot (c + id) \\
 \end{proposition}
 \end{graybox}
 
+\begin{figure}[!h]
+\centering
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1.85cm,y=1.85cm,
+axis lines=middle,
+xmin=-1,
+xmax=5,
+ymin=-1,
+ymax=3,
+xtick={-1,0,...,5},
+ytick={-3,-2,...,6},]
+\clip(-1.4725109228142914,-3.6020142531794552) rectangle (5.3902234350649305,6.061762219150244);
+\draw [line width=0pt,color=qqwuqq,fill=qqwuqq,fill opacity=1] (0,0) -- (0:1.0092256408645914) arc (0:26.56505117707799:1.0092256408645914) -- cycle;
+\draw [line width=2pt] (0,0)-- (4,2);
+\draw [line width=2pt,dash dot] (0,2)-- (4,2);
+\draw [line width=2pt,dash dot] (4,2)-- (4,0);
+\draw [color=qqwuqq](0.96981512807802,0.4020581817220694) node[anchor=north west] {$\arg(z_1)$};
+\begin{scriptsize}
+\draw [fill=qqqqff] (4,2) circle (2.5pt);
+\draw[color=qqqqff] (4.1085068711669,2.2457835389154512) node {$z_{1}$};
+\draw[color=black] (2.0,1.3) node {|z|};
+\draw [fill=xdxdff] (0,2) circle (2.5pt);
+\draw[dash dot, color=xdxdff] (0.34494358814519,2.2457835389154512) node {$Im(z_1)$};
+\draw [fill=xdxdff] (4,0) circle (2.5pt);
+\draw[dash dot, color=xdxdff] (4.3982973705234,0.24429008544130865) node {$Re(z_1)$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\caption{Vision géométrique des nombres complexes (Base du code par : \cite{graphes})}
+\end{figure}
+
 \begin{graybox}
 \begin{definition}[Forme trigonométrique d'un nombre complexe]
     Soit $z$ un nombre complexe, on peut l'écrire sous sa forme trigonométrique ainsi :
