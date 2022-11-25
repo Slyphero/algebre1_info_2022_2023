@@ -198,3 +198,251 @@ On en conclut que $\mathrm{pgcd}(72, 58) = 2$
 On en conclut que $\mathrm{pgcd}(625, 216) = 1$
 \end{enumerate}
 \end{exemple}
+
+\begin{graybox}
+\begin{theoreme}[Identité de Bézout]
+Soient $(a, b) \in \Z^2$ 
+\begin{align*}
+\exists (u, v) \in Z^2 \text{ tel que } au + bv = \mathrm{pgcd(a, b)}
+\end{align*}
+\end{theoreme}
+\end{graybox}
+
+\begin{graybox}
+\begin{corollaire}
+Soient $(a, b) \in (\Z^*)^2$, $d \in \Z$
+\begin{align*}
+\exists (u, v) \in \Z^2 \text{ tel que } au + bv = d \iff \mathrm{pgcd}(a,b) \mid d
+\end{align*}
+\end{corollaire}
+\end{graybox}
+
+Trouver les $(x, y) \in \Z$ tels que $ax + by = d$ et $\mathrm{pgcd}(a, b) \mid d$
+\\
+\textbf{Théorème de Bézout} : $\exists (x_0, y_0) \in \Z^2$ tel que $ax_0 + by_0 = d$
+\begin{align*}
+\begin{cases}
+&ax + by = d \\
+&ax_0 + by_0 = d
+\end{cases}
+\implies 
+a(x - x_0) + b(y - y_0) = 0 \iff a(x - x_0) = b(y_0 - y) \text{ multiple  }k \text{ ppcm}(a,b)
+\end{align*}
+\begin{align*}
+\exists k \in \Z \text{ tq } a(x - x_0) = b(y - y_0) = \mathrm{ppcm}(a, b)k \\
+\begin{cases}
+&x = x_0 + \frac{\mathrm{ppcm}(a, b)k}{a} \\
+&y = y_0 - \frac{\mathrm{ppcm}(a,b)k}{b}
+\end{cases}
+\end{align*}
+d'où 
+\begin{align*}
+\left\{ (x,y) \in \Z^2 \mid ax + by = d \right\} = (x_0, y_0) + \Z \left( \frac{\mathrm{ppcm}(a, b)}{a}, \frac{\mathrm{ppcm}(a, b}{b}\right)
+\end{align*}
+
+\begin{exemple}
+$a = 75$ et $b = 42$ \\
+\begin{align*}
+&75 = 42 \cdot 1 + 33 \\
+&42 = 33 \cdot 1 + 9 \\
+&33 = 9 \cdot 3 + 6 \\
+&9 = 6 \cdot 1 + 3\\
+&6 = 3 \cdot 2 + 0
+\end{align*}
+On remonte dans l'algorithme d'Euclide
+\begin{align*}
+3 &= 9 - 6  \\
+3 &= (42 - 33) - (33 - 9 \cdot 3) \\
+3 &= (42 - (75 - 42)) - ((75 - 42) - (42 - 33) 3)  \\
+3 &= (42 - (75 - 42)) - ((75 - 42) - (42 - (75 - 42)3)) \\
+3 &= 75 \cdot (-5) + 42 \cdot 9 
+\end{align*}
+\end{exemple}
+
+\begin{graybox}
+\begin{lemme}[Lemme de Gauss]
+$(a, b) \in \Z^*$ tels que $a$ et $b$ sont premiers entre eux (leur pgcd est 1)
+\begin{align*}
+c \in \Z \text{ tq } a \mid bc \implies a \mid c
+\end{align*}
+\end{lemme}
+\end{graybox}
+
+\begin{proof}
+\begin{align*}
+\mathrm{pgcd}(a, b) = 1 &\implies \exists (u, v) \in \Z^2 \text{ tq } au + bv = 1 \\
+&\implies a(cu) + b(cv) = c \\
+&\implies \mathrm{pgcd}(a,bc) \mid c
+\end{align*} 
+\end{proof}
+
+\section{Nombres premiers}
+\begin{graybox}
+\begin{definition}[Nombres premiers]
+$p \in \N^*$ est dit premier si 
+\begin{align*}
+\exists d \in \N^* \text{ tq } d \mid p \implies d \in \left\{ 1, p \right\}
+\end{align*}
+\end{definition}
+\end{graybox}
+
+\begin{exemple}
+$2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37$ sont des nombres premiers
+\end{exemple}
+
+\begin{remarque}
+$F_n = 2^{2^n} + 1$ est une suite composée exclusivement de nombres premiers.
+\end{remarque}
+
+\begin{graybox}
+\begin{theoreme}[Théorème d'Euclide]
+	Il existe une infinité de nombres premiers.
+\end{theoreme}
+\end{graybox}
+
+\begin{proof}
+Supposons qu'il existe $k$ nombres premiers $p_1, p_2, \cdots, p_k$ 
+\begin{align*}
+N \colon = p_1 p_2 \cdots p_k + 1 \implies p_i \nmid N
+\end{align*}
+\end{proof}
+
+\begin{graybox}
+\begin{lemme}
+Soit $n \in \N$ tq $n \geq 2$. \\ 
+Soit $p$ le plus petit diviseur de $n$ tq $p > 2 \implies p$ premier  
+\end{lemme}
+\end{graybox}
+
+\begin{proof}
+Si $p$ n'était pas premier : $1 < \exists d < p$ tq $d \mid p$
+\\
+$d \mid p$ et $p \mid n \implies d \mid n$ ce qui reviendrait à contredire la minimialité de $p$
+\end{proof}
+
+\begin{graybox}
+\begin{theoreme}[Décomposition en facteurs premiers]
+Soit $n \in \N^*$ tq $n \geq 2$. 
+Il existe une unique écriture de $n$ sous la forme de :
+\begin{align*}
+p_1^{\alpha_1} p_2^{\alpha_2}  \cdots p_k^{\alpha_k}
+\end{align*}
+tq 
+\begin{enumerate}
+\item $p_i$ premiers
+\item $\alpha_i \in \N^*$
+\item $p_1 < p_2 < \cdots < p_k$
+\end{enumerate}
+\end{theoreme}
+\end{graybox}
+
+\begin{proof}
+\textbf{Existence} : On procède par récurrence forte en utilisant le Lemme de Gauss \\
+\textbf{Unicité} : On utilise le Lemme de Gauss
+\end{proof}
+
+\begin{proposition}[PGCD à partir de la décomposition en facteurs premiers]
+A compléter 
+\end{proposition}
+
+\section{Congruences}
+\begin{graybox}
+\begin{definition}[Congruence]
+	Soient $(a, b) \in \Z^2$ et $n \in \N, n \geq 2$ \\
+	On dit que $a$ et $b$ sont congrus modulo $n$ s'il existe un $k \in \Z$ tel que :
+	\begin{align*}
+	n \mid a - b \iff a - b = kn
+	\end{align*}
+	On note : 
+	\begin{align*}
+	a \equiv b \ [n] \iff a = b \ (\mathrm{mod}\ n)
+	\end{align*}
+\end{definition}
+\end{graybox}
+
+\begin{exemple}
+\begin{align*}
+9 \equiv 2 [7] \iff 9 \equiv 9 [7]
+\end{align*}
+\end{exemple}
+
+\begin{graybox}
+\begin{proposition}
+Pour $(a, b, c) \in \Z^3$ et $n \in \N, n \geq 2$ 
+\begin{enumerate}
+\item $a \equiv a \ [n]$ (Réflexivité)
+\item $a \equiv b \ [n] \implies b \equiv a \ [n]$ (Symétrie)
+\item $a \equiv b \ [n],\ b \equiv c \ [n] \implies a \equiv c \ [n]$ (Transitivité)
+\item $a \equiv b \ [n],\ c \equiv d \ [n] \implies a + c \equiv b + d \ [n]$
+\item $a \equiv b \ [n],\ c \equiv d \ [n] \implies ac \equiv bc \ [n]$
+\item $a \equiv b \ [n] \implies a^k \equiv b^k \ [n], (k \in \N)$ 
+\end{enumerate}
+\end{proposition}
+\end{graybox}
+
+\begin{proof}
+On revient à la définition de congruence
+\begin{enumerate}
+\item $a - a = 0 = 0 \times n \implies a \equiv a \ [n]$
+\item $a \equiv b \ [n] \iff a - b = kn, \ (k \in \Z)$ puis $b \equiv c \ [n] \implies b = c + k'n,\ (k' \in \Z)$ On a donc
+\begin{align*}
+a - (c + k'n) = kn &\iff a - c - k'n = kn \\
+				   &\iff a - c = (k + k')n 
+\end{align*}
+En posant $(k + k') = K$, $K \in \Z$ par stabilité, ainsi on retrouve 
+\begin{align*}
+a - c = Kn \iff a \equiv c \ [n]
+\end{align*}  
+\end{enumerate}
+\end{proof}
+
+\begin{exemple}
+\begin{align*}
+8^{5000} - 6^{4787} \text{ modulo } 7
+\end{align*}
+On a : 
+$
+\begin{cases}
+8 \equiv 1 \ [7] \\
+6 \equiv -1 \ [7]
+\end{cases}
+\implies 
+\begin{cases}
+8^{5000} \equiv 1 \ [7] \\
+6^{4787} \equiv -1 \ [7]
+\end{cases}
+\implies 
+\begin{cases}
+8^{5000} - 6^{4787} \equiv 2 \ [7]
+\end{cases}
+$
+\end{exemple}
+
+\begin{exemple}
+Trouver les $x \in \Z$ tels que 
+\begin{align*}
+3x \equiv 5 \ [7]
+\end{align*}
+On a une solution particulière $x_0 = 4$
+\\
+On a ensuite
+\begin{align*}
+3x &\equiv 5 \ [7] \\
+6x &\equiv 10 \ [7] \\
+6x &\equiv 3 \ [7] \\
+6x &\equiv -x_0 \ [7] \\
+\end{align*}
+\begin{align*}
+-x_0 \equiv 3 \ [7] \iff x_0 \equiv -3 \ [7] \equiv 4 \ [7]
+\end{align*}
+On a ensuite 
+\begin{align*}
+3x &\equiv 5 \ [7] \\
+3x_0 &\equiv 5 \ [7] \iff 3 \times 4 \equiv 5 \ [7]
+\end{align*}
+On a donc :
+\begin{align*}
+3(x - x_0) &\equiv 0 \ [7] \\
+3(x - 4) &\equiv 0 \ [7]
+\end{align*}
+\end{exemple}
