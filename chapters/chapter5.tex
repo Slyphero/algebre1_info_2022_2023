@@ -254,7 +254,7 @@ On remonte dans l'algorithme d'Euclide
 3 &= 9 - 6  \\
 3 &= (42 - 33) - (33 - 9 \cdot 3) \\
 3 &= (42 - (75 - 42)) - ((75 - 42) - (42 - 33) 3)  \\
-3 &= (42 - (75 - 42)) - ((75 - 42) - (42 - (75 - 42)3)) \\
+3 &= (42 - (75 - 42)) - ((75 - 42) - (42 - (75 - 42))3) \\
 3 &= 75 \cdot (-5) + 42 \cdot 9 
 \end{align*}
 \end{exemple}
@@ -327,7 +327,6 @@ Il existe une unique écriture de $n$ sous la forme de :
 \begin{align*}
 p_1^{\alpha_1} p_2^{\alpha_2}  \cdots p_k^{\alpha_k}
 \end{align*}
-tq 
 \begin{enumerate}
 \item $p_i$ premiers
 \item $\alpha_i \in \N^*$
@@ -341,9 +340,49 @@ tq
 \textbf{Unicité} : On utilise le Lemme de Gauss
 \end{proof}
 
+\begin{graybox}
 \begin{proposition}[PGCD à partir de la décomposition en facteurs premiers]
-A compléter 
+Soient $(a, b) \in \Z^2$, pour déterminer leur PGCD, on peut se servir de leurs décomposition en facteurs premiers.
+\begin{align*}
+a &= p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k} (k \in \N)\\
+b &= n_1^{\beta_1} n_2^{\beta_2} \cdots p_i^{\beta_i} (i \in \N)
+\end{align*}
+pgcd$(a, b)$ correspond aux produits des facteurs premiers communs.
 \end{proposition}
+\end{graybox}
+
+\begin{remarque}[Décomposer en facteurs premiers]
+Pour décomposer facilement un nombre en facteurs premiers. \begin{enumerate}
+\item On divise par le diviseur premier le plus faible tel que le reste soit nul
+\item On refait de même avec le quotient, il faut que le diviseur premier soit supérieur ou égal au précédent.
+\item On continue jusqu'à finir avec un quotient premier
+\end{enumerate}
+\end{remarque}
+
+\begin{exemple}
+Décomposons $423$ en facteurs premiers.
+\begin{align*}
+\frac{423}{3} &= 141 \\
+\frac{141}{3} &= 47 \\
+\end{align*}
+Sachant que $47$ est premier, on obtient la décomposition
+\begin{align*}
+423 = 3 \times 3 \times 47 = 3^2 \times 47
+\end{align*}
+\end{exemple}
+
+\begin{exemple}
+Calculons le PGCD de 624 et 408.\\
+On a :
+\begin{align*}
+624 &= 2^4 \times 3 \times 13 \\
+408 &= 2^3 \times 3 \times 17
+\end{align*}
+On remarque que $2^3$ et $3$ sont communs aux deux décompositions.
+\begin{align*}
+\mathrm{pgcd}(624, 408) = 2^3 \times 3 = 24
+\end{align*}
+\end{exemple}
 
 \section{Congruences}
 \begin{graybox}
