@@ -423,6 +423,7 @@ Pour $(a, b, c) \in \Z^3$ et $n \in \N, n \geq 2$
 On revient à la définition de congruence
 \begin{enumerate}
 \item $a - a = 0 = 0 \times n \implies a \equiv a \ [n]$
+\item $a \equiv b \ [n] \iff a - b = kn, (k \in \Z) \iff b - a = -kn, (k \in \Z) \implies b \equiv a \ [n]$
 \item $a \equiv b \ [n] \iff a - b = kn, \ (k \in \Z)$ puis $b \equiv c \ [n] \implies b = c + k'n,\ (k' \in \Z)$ On a donc
 \begin{align*}
 a - (c + k'n) = kn &\iff a - c - k'n = kn \\
@@ -432,6 +433,66 @@ En posant $(k + k') = K$, $K \in \Z$ par stabilité, ainsi on retrouve
 \begin{align*}
 a - c = Kn \iff a \equiv c \ [n]
 \end{align*}  
+\item 
+$a \equiv b \ [n],\ c \equiv d \ [n]$ 
+D'après la définition de congruence, on a :
+\begin{align*}
+\exists k \in \Z,\ a - b &= kn & \exists k' \in \Z,\ c - d &= k'n \\
+a &= b + kn & c &= d + k'n
+\end{align*}
+En faisant la somme des deux égalités on obtient:
+\begin{align*}
+a + c &= b + d + kn + k'n \\
+a + c &= b + d + (k + k')n
+\end{align*}
+En posant $K = k + k'$, $K \in \Z$ par stabilité on obtient :
+\begin{align*}
+a + c &= b + d + Kn \iff a + c \equiv b + d \ [n]
+\end{align*}
+\item 
+$a \equiv b \ [n],\ c \equiv d \ [n]$ D'après la définition de congruence on a :
+\begin{align*}
+\exists k \in \Z,\ a - b &= kn & \exists k' \in \Z,\ c - d &= k'n \\
+a &= b + kn & c &= d + k'n
+\end{align*}
+En faisant le produit des deux égalités on obtient :
+\begin{align*}
+ac &= (b + kn)(d + k'n) \\
+ac &= bd + bk'n + dkn + kk'n^2 \\
+ac &= bd + (bk' + dk +kkn)n
+\end{align*}
+En posant $K = bk' + dk + kk'n$, $K \in \Z$ par stabilité on obtient :
+\begin{align*}
+ac = bd + Kn \iff ac - bd = Kn \iff ac \equiv bd \ [n]
+\end{align*}
+\item On procède par récurrence :
+\\
+Supposons la propriété
+\begin{align*}
+P_n \colon ``a^p \equiv b^p \ [n], p \in \N"
+\end{align*}
+\textbf{Initialisation :} Pour $p = 0$ on a :
+$a^0 = b^0 = 1$
+\begin{align*}
+a^0 \equiv b^0 \ [n] \iff 1 \equiv 1 \ [n]
+\end{align*}
+La propriété $P_0$ est vraie.
+\\
+\textbf{Hérédité :} Supposons pour un $p > 0$ qu'on ait la propriété 
+\begin{align*}
+P_n \colon ``a^p \equiv b^p \ [n]"
+\end{align*}
+Montrons que $P_{n + 1}$ est vraie.\\
+D'après l'hypothèse de récurrence :
+\begin{align*}
+a^p \equiv b^p \ [n]
+\end{align*}
+Sachant que $a \equiv b \ [n]$, par produit de congruences on obtient :
+\begin{align*}
+a^p a &\equiv b^p b \ [n] \\
+P_{n+1} \colon ``a^{p+1} &\equiv b^{p+1} \ [n]"
+\end{align*}
+On a montré que $P_0$ est vraie puis que si $P_n$ est vraie alors $P_{n+1}$ est vraie. Ceci achève la récurrence et la propriété est vérifiée.
 \end{enumerate}
 \end{proof}
 
