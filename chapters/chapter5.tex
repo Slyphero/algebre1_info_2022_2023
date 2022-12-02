@@ -546,7 +546,7 @@ On a donc :
 \end{align*}
 \begin{align*}
 3(x - 4) \equiv 0 \ [7] &\iff 3(x - 4) = 7k,\ (k \in \Z) \\
-						&\iff 3(x - 4) \mid 7 \\
+						&\iff 7 \mid 3(x - 4) \\
 \end{align*}
 Par le Lemme de Gauss :
 \begin{align*}
@@ -555,3 +555,104 @@ Par le Lemme de Gauss :
 		  &\implies x = 7k + 4,\ (k \in \Z)
 \end{align*}
 \end{exemple}
+On doit être capable de résoudre deux types d'équations
+\begin{itemize}
+    \item Equation diophantienne : $a, b \in \N^*, \mathrm{pgcd}(a, b) = d$
+        \begin{align*}
+            (E) : ax + by = d,\ (x, y) \in \Z^2
+        \end{align*}
+    \item Equation à congruences
+\end{itemize}
+
+\begin{remarque}[Méthode pour les équations diophantiennes]~
+    \begin{enumerate}
+        \item On trouve une solution particulière avec l'identité de Bézout.
+        \item On résout ensuite l'équation homogène à l'aide du Lemme de Gauss.
+        \item On regroupe les deux équations et on résout le système.
+    \end{enumerate}
+\end{remarque}
+
+\begin{remarque}[Méthode pour les équations à congruences]~
+    \begin{enumerate}
+        \item On trouve une solution particulière avec l'identité de Bézout en réécrivant la congruence sous une forme d'égalité.
+        \item On résout l'équation homogène à l'aide du Lemme de Gauss.
+        \item On regroupe les deux équations et on résout le système.
+    \end{enumerate}
+\end{remarque}
+
+\begin{remarque}
+Bien vérifier que l'équation est solvable en vérifiant si le membre de droite est un multiple du pgcd.
+\end{remarque}
+
+\begin{remarque}
+$a_i \in \Z, m_i \in \N^*, (i = 1, 2)$ tel que
+\begin{itemize}
+    \item $\mathrm{pgcd}(m_1, m_2) = 1$
+    \item $m_i > 1$, $\forall i$
+\end{itemize}
+\begin{align*}
+    (E) \colon x \equiv a_i \ [m_i],\ (i=1,2)
+\end{align*}
+\begin{itemize}
+    \item Identité de Bézout : $\exists (u_1, u_2) \in \Z^2$ tel que $m_1u_1 + m_2u_2 = 1$
+\begin{align*}
+S_0 = a_1m_2u_2 + a_2m_1u_1
+\end{align*}
+\begin{align*}
+    S_0 &\equiv a_1 m_2 u_2 \ [m_1] \\
+        &\equiv a_1(1 - m_1 u_1) \ [m_1] \\
+        &\equiv a_1 \ [m_1] \\
+        &\equiv a_2 m_1 u_1 \ [m_2] \\
+        &\equiv a_2 (1 - m_2 u_2) \ [m_2] \\
+        &\equiv a_2 \ [m_2]
+\end{align*}
+$x = S_0$ est une solution particulière de $(E)$
+\end{itemize}
+On a :
+\begin{align*}
+    \begin{cases}
+x &\equiv a_i \ [m_i] \\
+      S_0 &\equiv a_i \ [m_i]
+    \end{cases}
+    \implies 
+    x - S_0 \equiv 0 \implies \exists k \in \Z, x - S_0 = m_1 m_2 k
+\end{align*} 
+d'où l'ensemble des solution de $(E)$ est 
+\begin{align*}
+S_0 + m_1 m_2
+\end{align*}
+la division euclidienne, $\exists ! (q, k_0) \in \Z^2$ tel que
+\begin{enumerate}
+    \item $S_0 = q m_1 m_2 + k_0$ 
+    \item $0 \leq k_0 < m_1 m_2$
+\end{enumerate}
+\begin{align*}
+    S_0 + m_1 m_2 \Z &= k_0 + m_1 m_2 q + m_1 m_2 \Z \\
+                     &= k_0 + m_1 m_2 (q + \Z) \\ 
+                     &= k_0 + m_1 m_2 \Z
+\end{align*}
+\end{remarque}
+
+\begin{graybox}
+    \begin{theoreme}[Théorème des restes chinois]
+        Soient $m_1, m_2$ deux entiers naturels tels que 
+        \begin{itemize}
+            \item $m_1 > 1$
+            \item $\mathrm{pgcd}(m_1, m_2) = 1$
+        \end{itemize}
+        Soient $a_i \in \Z, (i = 1, 2)$
+        \\
+        Notons l'ensemble des solutions des systèmes d'équations par $\mathcal{S}$.
+        \begin{align*}
+            x &\equiv a_1 \ [m_1] & x &\equiv a_2 \ [m_2]
+        \end{align*}
+    \end{theoreme}
+    Alors 
+    \begin{align*}
+        \exists k_0 \in \Z \text{ tel que } 
+    \end{align*}
+    \begin{itemize}
+        \item $\mathcal{S} = k_0 + m_1 m_2 \Z$
+        \item $0 \leq k_0 < m_1 m_2$
+    \end{itemize}
+\end{graybox}

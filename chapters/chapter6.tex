@@ -1,0 +1,98 @@
+\chapter{Polynômes}
+
+\begin{graybox}
+    \begin{definition}[Polynôme]
+        Un polynôme est un élément de l'ensemble 
+        \begin{align*}
+            \K[X] = \{ a_0 1 + a_1 X + a_2 X^2 + \cdots a_n X^n \mid a_i \in \K,\ n \in \N \}
+        \end{align*}
+    \end{definition}
+\end{graybox}
+
+\begin{remarque}
+$\K$ désigne le corps étudié.
+\end{remarque}
+\begin{graybox}
+    \begin{definition}[Fonction polynômiale]
+        Une fonction polynomiale est une fonction $f$ définie par :
+        \begin{align*}
+            f \colon 
+            \begin{cases}
+                \K &\to \K \\
+                x &\mapsto \sum_{i = 0}^{n} a_i x^i,\ a_i \in \K
+            \end{cases}
+        \end{align*}
+    \end{definition}
+\end{graybox}
+
+Soient $P$ et $Q$ deux polynômes définis par 
+                \begin{itemize}
+                    \item $P(X) = a_0 1 + a_1 X + \cdots + a_n X^n$
+                    \item $Q(X) = b_0 1 + b_1 X+ \cdots + b_n X^n$
+                \end{itemize}
+
+        \begin{enumerate}
+            \item On a :
+            \begin{align*}
+                P(X) + Q(X) \colon = (a_0 + b_0) 1 + (a_1 + b_1) X + \cdots + (a_n + b_n) X^n
+            \end{align*}
+        \item Puis :
+            \begin{align*}
+                (\sum_{k = 0}^m a_k X^k) \cdot (\sum_{l = 0}^{n} b_l X^l) \colon = \sum_{k = 0}^m \sum_{l = 0}^n a_k b_l X^{k + l}
+            \end{align*}
+\end{enumerate}
+
+\begin{graybox}
+    \begin{proposition}
+        Soient $P, Q, R$ trois polynômes.   
+        \begin{enumerate}
+            \item $(P + Q) + R = P + (Q + R)$
+            \item $P + 0 = 0 + P = P$
+            \item $P + (-P) = (-P) + P = 0$
+            \item $(P \cdot Q) \cdot R = P \cdot (Q \cdot R)$
+            \item $P \cdot 1 = 1 \cdot P = P$
+            \item $P \cdot Q = Q \cdot P$ 
+            \item $(P + Q) R = P \cdot R + Q \cdot R$
+            \item $P \cdot (Q + R) = P \cdot Q + P \cdot R$
+        \end{enumerate}
+    \end{proposition}
+\end{graybox}
+
+\begin{graybox}
+    \begin{definition}[Degré d'un polynôme]
+        $P = a_0 + a_1 X + \cdots a_n X^n$ avec $(a_n \neq 0)$ $\in \K[X]$
+        On définit $n$ comme étant le degré de $P$, on le note :
+        \begin{align*}
+            \mathrm{deg}(P) = n
+        \end{align*}
+        On peut aussi décrire le degré sous la forme d'une application :
+        $\mathrm{deg} \colon \K[X] \to \N$
+    \end{definition}
+\end{graybox}
+
+\begin{graybox}
+    \begin{proposition}[Propriétés sur les degrés]~ 
+        \begin{enumerate}
+            \item Soit $\lambda \in \K$ on a : $\mathrm{deg}(\lambda) = 0$
+            \item Soient $P$ et $Q$ deux polynômes on a : $\mathrm{deg}(P \cdot Q) = \mathrm{deg}(P) + \mathrm{deg}(Q)$
+        \end{enumerate}
+    \end{proposition}
+\end{graybox}
+
+\begin{graybox}
+    \begin{theoreme}
+        $P_1, P_2$ deux polynômes non nuls.
+        \begin{align*}
+            \exists ! (Q, R) \in \K[X]^2 \text{ tel que } P_1 = P_2 Q + R 
+        \end{align*}
+        Vérifiant :
+             $\mathrm{deg}(R) = -\infty$ ou $0 \leq \mathrm{deg}(R) < \mathrm{deg}(Q)$
+    \end{theoreme}
+\end{graybox}
+
+\begin{exemple}
+$P_1 = X^3 + 6X^2 + 11X + 6$ et $P_2 = X + 3$
+\begin{align*}
+X^3 + 6X^2 + 11X + 6 = (X+3)(X^2 + 13X + 2)  
+\end{align*}
+\end{exemple}
