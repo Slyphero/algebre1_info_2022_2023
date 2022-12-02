@@ -75,18 +75,11 @@ ce qui n'est possible que si $|q' - q| = 0$ ce qui implique que $q = q'$. Ceci e
 \section{PGCD et PPCM}
 \begin{graybox}
 \begin{definition}[PPCM et PGCD]
-Soit $(a, b) \in \Z^2 \backslash \{(0, 0)\}$ tel que $ab \neq 0$
-\begin{align*}
-\mathcal{M} \colon = \left\{ m \in \Z \ | \ a \mid m \text{ et } b \mid m \right\} \Rightarrow \mathcal{M} \neq \phi \text{ car } ab \in \mathcal{M}
-\end{align*}
-\begin{align*}
-\mathcal{M} \cap \N^* \leftarrow \text{ il y a le plus petit commun multiple (PPCM) }
-\end{align*}
-\begin{align*}
-\mathcal{D} = \left\{ d \in \Z \mid d \mid a \text{ et } d \mid b \right\} \Rightarrow \mathcal{D} \neq \emptyset \text{ car } 1 \in \mathcal{D}
-\end{align*}
-On a : $d \mid a, b \implies |d| \leq m \min (|a|, |b|)$ et $\mathrm{Card}(\mathcal{D}) < \infty$
-Il y a le plus grand élément $\leftarrow$ le plus grand commun diviseur (PGCD)
+Soient deux entiers non nuls $a, b$.
+\begin{enumerate}
+\item L'ensemble des diviseurs de $\N^*$ communs à $a$ et $b$ admet un plus grand élément noté $a \wedge b$. C'est le \textbf{plus grand commun diviseur} (PGCD) des entiers $a$ et $b$.
+\item L'ensemble des entiers de $\N^*$ multiples communs de $a$ et $b$ admet un plus petit élément noté : $a \vee b$. C'est le \textbf{plus petit commun multiple} (PPCM) des entiers $a$ et $b$.
+\end{enumerate}
 \end{definition}
 \end{graybox}
 
@@ -656,3 +649,13 @@ la division euclidienne, $\exists ! (q, k_0) \in \Z^2$ tel que
         \item $0 \leq k_0 < m_1 m_2$
     \end{itemize}
 \end{graybox}
+
+\begin{graybox}
+\begin{theoreme}[Petit théorème de Fermat]
+Si $p$ un nombre premier et si $a$ un entier tel que $\mathrm{pgcd}(a, p) = 1$. On a 
+\begin{align*}
+a^{p- 1} \equiv 1 \ [p]
+\end{align*}
+\end{theoreme}
+\end{graybox}
+
