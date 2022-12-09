@@ -1,5 +1,6 @@
 \chapter{Polynômes}
 
+\section{Définitions}
 \begin{graybox}
     \begin{definition}[Polynôme]
         Un polynôme est un élément de l'ensemble 
@@ -25,6 +26,7 @@ $\K$ désigne le corps étudié.
     \end{definition}
 \end{graybox}
 
+\section{Propriétés}
 Soient $P$ et $Q$ deux polynômes définis par 
                 \begin{itemize}
                     \item $P(X) = a_0 1 + a_1 X + \cdots + a_n X^n$
@@ -58,6 +60,7 @@ Soient $P$ et $Q$ deux polynômes définis par
     \end{proposition}
 \end{graybox}
 
+\subsection{Degré d'un polynôme}
 \begin{graybox}
     \begin{definition}[Degré d'un polynôme]
         $P = a_0 + a_1 X + \cdots a_n X^n$ avec $(a_n \neq 0)$ $\in \K[X]$
@@ -82,7 +85,7 @@ Soient $P$ et $Q$ deux polynômes définis par
 \end{graybox}
 
 \begin{graybox}
-    \begin{theoreme}
+    \begin{theoreme}[Division euclidienne]
         $P_1, P_2$ deux polynômes non nuls.
         \begin{align*}
             \exists ! (Q, R) \in \K[X]^2 \text{ tel que } P_1 = P_2 Q + R 
@@ -92,6 +95,10 @@ Soient $P$ et $Q$ deux polynômes définis par
     \end{theoreme}
 \end{graybox}
 
+\begin{remarque}
+Certaines propriétés vues dans le chapitre précédent, sont analogues avec les polynômes.
+\end{remarque}
+
 \begin{exemple}
 $P_1 = X^3 + 6X^2 + 11X + 6$ et $P_2 = X + 3$
 \begin{align*}
@@ -100,16 +107,144 @@ X^3 + 6X^2 + 11X + 6 = (X+3)(X^2 + 13X + 2)
 \end{exemple}
 
 \begin{graybox}
+\begin{definition}[Polynôme irréductible]
+Un polynôme $P \in \K[X]$ \textbf{non constant} est dit \textbf{irréductible}, s'il n'existe pas $(P_1, P_2) \in \K^[X]$ tel que $P = P_1 P_2$ et $\mathrm{deg}(P_i) < \mathrm{deg}(P)$
+\end{definition}
+\end{graybox}
+
+\begin{graybox}
+\begin{proposition}
+Soit $P \in \K[X]$ \textbf{non constant et irréductible}. On a les propriétés suivantes :
+\begin{enumerate}
+\item $\K = \C \iff \mathrm{deg}(P) = 1$
+\item $\K = \R \iff \text{ soit } \mathrm{deg}(P) = 1 \text{ ou bien } \mathrm{deg}(P) = 2$ avec le discriminant négatif.
+\end{enumerate}
+\end{proposition}
+\end{graybox}
+
+\begin{graybox}
+\begin{proposition}
+Soit $P(X)$ un polynôme \textbf{non constant}, si $\alpha$ est une racine de $P(X)$ alors on a :
+\begin{align*}
+X - \alpha \mid P(X)
+\end{align*}
+Autrement dit :
+\begin{align*}
+P(\alpha) = 0 \iff X - \alpha \mid P(X)
+\end{align*}
+\end{proposition}
+\end{graybox}
+
+\begin{proof}
+Division euclidienne de $P$ par $X - \alpha$.
+\begin{align*}
+\exists ! (Q, R) \in \K[X] \times \K \text{ tel que } \\
+P(X) = (X - \alpha) Q(X) + R
+\end{align*}
+On a :
+\begin{align*}
+P(\alpha) = (\alpha - \alpha) Q(\alpha) + R = R
+\end{align*}
+Puisque par hypothèse $P(\alpha) = 0$, le reste $R$ est nul.
+Ainsi il reste
+\begin{align*}
+P(X) = (X - \alpha) Q(X)
+\end{align*}
+Ce qui revient à dire que $X - \alpha$ divise $P(X)$
+\end{proof}
+
+\begin{graybox}
+\begin{corollaire}
+Un polynôme de degré $d$ a au plus $d$ racines.
+\end{corollaire}
+\end{graybox}
+
+\begin{graybox}
+\begin{proposition}
+Soit $P \in \K[X]$ non nul. Soit $\alpha \in \C$.
+\begin{align*}
+P(\alpha) = 0 \iff P(\overline{\alpha}) = 0
+\end{align*}
+\end{proposition}
+\end{graybox}
+
+\begin{proof}
+$P(X) = a_0 + a_1X + \cdots + a_p X^p,\ a_i \in \R$
+\begin{align*}
+\overline{P(\alpha)} &= \overline{a_0 + a_1\alpha + \cdots + a_p \alpha^p} \\
+&= \overline{a_0} + \overline{a_1\alpha} + \cdots + \overline{a_p \alpha^p} \\
+&= \overline{a_0} + \overline{a_1}(\overline{\alpha}) + \cdots + \overline{a_p}(\overline{\alpha})^p \\
+&= a_0 + a_1 (\overline{\alpha}) + \cdots + a_p (\overline{\alpha})^p \\
+&= P(\overline{\alpha})
+\end{align*}
+d'où $P(\alpha) = 0 \iff P(\overline{\alpha}) = 0$
+\\
+On a donc $X - \alpha \mid P$ et $X - \overline{\alpha} \mid P$ \\
+Ainsi 
+\begin{align*}
+X - \alpha \mid P,\ \exists Q \text{ tel que } P(X) = (X - \alpha)Q(X)
+\end{align*}
+\begin{align*}
+\overline{\alpha} \in \C \backslash \R \implies \alpha \neq \overline{\alpha}, \ X - \overline{\alpha} \mid P \iff X - \overline{\alpha} \mid (X - \alpha) Q(X) \\
+\mathrm{pgcd}(X - \alpha, X - \overline{\alpha}) = 1
+\end{align*}
+Par le Lemme de Gauss :
+\begin{align*}
+X - \overline{\alpha} \mid Q \\
+\exists Q_1 \text{ tel que } Q_1(X) = (X - \overline{\alpha})Q_1(X)
+\end{align*}
+\begin{align*}
+P(X) &= (X - \alpha) Q(X) \\
+	 &= (X - \alpha)(X - \overline{\alpha}) Q_1(X) \\
+	 &= X^2 - (\alpha + \overline{\alpha})X + \alpha \overline{\alpha} \\
+	 &= X^2 - 2Re(\alpha)X + |\alpha|^2
+\end{align*}
+\end{proof}
+
+\begin{graybox}
+\begin{definition}
+Soit $P$ un polynôme non constant. Soit $\alpha \in \K$ et $m \in \N^*$ $\alpha$ est une racine d'ordre $m$ de $P$ si et seulement si.
+\begin{align*}
+(X - \alpha)^m \mid P \text{ et } (X - \alpha)^{m+1} \nmid P
+\end{align*}
+\end{definition}
+\end{graybox}
+
+\begin{graybox}
+\begin{theoreme}
+Soit $P$ un polynôme non constant, $\alpha \in \K$, $m \in \N^*$
+\begin{align*}
+(X - \alpha)^m \mid P \iff P(\alpha) = P'(\alpha) = \cdots = P^{m-1}(\alpha) = 0
+\end{align*}
+\end{theoreme}
+\end{graybox}
+
+\begin{proof} Pour $m = 2$
+$\implies$ 
+\begin{align*}
+Q \in \K [X] \text{ tel que } P(X) = (X - \alpha)^2 Q(X) \\
+P(\alpha) = (\alpha - \alpha)^2 Q(\alpha) = 0 \\
+P(X) = 2(X - \alpha) Q(X) + (X - \alpha)^2 Q(X) \\
+P(\alpha) = 2 (\alpha - \alpha) Q(\alpha) + (\alpha - \alpha)^2 Q(\alpha) = 0
+\end{align*}
+$\impliedby$
+\begin{align*}
+P(\alpha) = 0 \implies \exists Q \in \K[X] \text{ tel que } P(X) = (X - \alpha) Q(X) \\
+P'(X) = Q(X) + (X - \alpha)Q'(X) \\
+P'(\alpha) = Q(\alpha) + (\alpha - \alpha) Q'(\alpha) = Q(\alpha) = 0
+\end{align*}
+\end{proof}
+
+\begin{remarque}
+Regarder dans le TD 6, les exercices 3, 5, 7, 12, 14, 15, 16, 19, 21
+\end{remarque}
+
+\begin{graybox}
 \begin{theoreme}[Théorème fondamental de l'algèbre]
 Soit $P(X)$ un polynôme à coefficients complexes de degré $n$. $P(X)$ admet $n$ racines complexes. 
 \end{theoreme}
 \end{graybox}
 
-\begin{graybox}
-\begin{proposition}
-Soit $P(X)$ un polynôme, si $\alpha$ est une racine de $P(X)$ alors on a :
-\begin{align*}
-X - \alpha \mid P(X)
-\end{align*}
-\end{proposition}
-\end{graybox}
+\begin{remarque}
+Ce théorème s'appelle également le théorème d'Alembert-Gauss.
+\end{remarque}
