@@ -75,6 +75,8 @@ Soient $P$ et $Q$ deux polynômes définis par
         \begin{enumerate}
             \item Soit $\lambda \in \K$ on a : $\mathrm{deg}(\lambda) = 0$
             \item Soient $P$ et $Q$ deux polynômes on a : $\mathrm{deg}(P \cdot Q) = \mathrm{deg}(P) + \mathrm{deg}(Q)$
+            \item Soient $P$ et $Q$ deux polynômes on a :
+            $\mathrm{deg}(P + Q) = \mathrm{max}\left(\mathrm{deg}(P),\ \mathrm{deg}(Q)\right)$
         \end{enumerate}
     \end{proposition}
 \end{graybox}
@@ -96,3 +98,18 @@ $P_1 = X^3 + 6X^2 + 11X + 6$ et $P_2 = X + 3$
 X^3 + 6X^2 + 11X + 6 = (X+3)(X^2 + 13X + 2)  
 \end{align*}
 \end{exemple}
+
+\begin{graybox}
+\begin{theoreme}[Théorème fondamental de l'algèbre]
+Soit $P(X)$ un polynôme à coefficients complexes de degré $n$. $P(X)$ admet $n$ racines complexes. 
+\end{theoreme}
+\end{graybox}
+
+\begin{graybox}
+\begin{proposition}
+Soit $P(X)$ un polynôme, si $\alpha$ est une racine de $P(X)$ alors on a :
+\begin{align*}
+X - \alpha \mid P(X)
+\end{align*}
+\end{proposition}
+\end{graybox}

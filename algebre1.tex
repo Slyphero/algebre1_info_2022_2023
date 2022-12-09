@@ -1,7 +1,7 @@
 \documentclass[a4paper]{report}
 
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.8]{geometry}
+\usepackage[scale=0.85]{geometry}
 \usepackage{amsmath, amsfonts, amsthm, amssymb, mathtools}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
@@ -23,6 +23,16 @@
 \usepackage{mathrsfs}
 \usetikzlibrary{arrows}
 \pagestyle{empty}
+
+\usepackage{titlesec}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+
+\titleformat*{\section}{\Large\bfseries\sffamily\color{red}}
+\titleformat*{\subsection}{\large\bfseries\sffamily\color{blue}}
+\titleformat*{\subsubsection}{\sffamily\color{black}}
 
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -58,7 +68,7 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\K}{\mathbb{K}}
 
-\newtcolorbox{graybox}{breakable, enhanced, colframe=white, colback=gray!20!white, arc=0mm, outer arc=0mm}
+\newtcolorbox{graybox}{breakable, enhanced, frame hidden, colframe=black, borderline west={2pt}{0pt}, colback=gray!15!white, arc=0mm, outer arc=0mm}
 
 \DeclareMathSymbol{\mlqq}{\mathrel}{operators}{"5C}
 \DeclareMathSymbol{\mrqq}{\mathrel}{operators}{`"}
@@ -69,6 +79,8 @@
 \title{Algèbre 1 pour les informaticiens}
 \date{Année scolaire 2022-2023}
 \author{}
+
+
 
 \begin{document}
 
