@@ -45,10 +45,14 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}{Définition}[section]
+
+\theoremstyle{plain}
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{theoreme}{Théorème}[section]
 \newtheorem{lemme}{Lemme}[section]
 \newtheorem{corollaire}{Corollaire}[section]
+
+\theoremstyle{remark}
 \newtheorem{remarque}{Remarque}[section]
 \newtheorem{exemple}{Exemple}[section]
 
@@ -83,12 +87,12 @@
 	\tableofcontents
 	\clearpage
 	\pagestyle{fancy}
-	\include{chapters/chapter1.tex}
-	\include{chapters/chapter2.tex}
-	\include{chapters/chapter3.tex}
-	\include{chapters/chapter4.tex}
-	\include{chapters/chapter5.tex}
-    \include{chapters/chapter6.tex}
+	\input{chapters/chapter1.tex}
+	\input{chapters/chapter2.tex}
+	\input{chapters/chapter3.tex}
+	\input{chapters/chapter4.tex}
+	\input{chapters/chapter5.tex}
+    \input{chapters/chapter6.tex}
 	\bibliographystyle{plain}
 	\bibliography{refs} 
 \end{document}
