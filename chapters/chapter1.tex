@@ -93,112 +93,63 @@ Ici $\K$ désigne soit $\N$, soit $\Z$, soit $\Q$, soit $\R$
 \begin{graybox}
 	\begin{proposition}[Addition sur les fractions]
 		\begin{align*}
-			\forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}	
+			\forall (a, b, c, d) \in \Z^4 \text{ tel que } b, d \neq 0,\ \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}	
 		\end{align*}
 	\end{proposition}
 \end{graybox}
 
-\begin{proof}~
+\begin{proof}
+	$\forall (a, b, c, d, a', b', c', d') \in \Z^8 \text{ tel que } b, d, b', d' \neq 0$
 	\\
-	$\forall (a, b, c, d, a', b', c', d') \in \Z^8$
-	
-	\noindent D'après la proposition on a :
+	On considère que 
+	$\frac{a}{b} = \frac{a'}{b'} \text{ si } ab' = a'b$
+	et 
+	$\frac{c}{d} = \frac{c'}{d'} \text{ si } cd' = c'd$
+	\\
+	Vérifions que si $\frac{a}{b} = \frac{a'}{b'}$ et que $\frac{c}{d} = \frac{c'}{d'}$, alors 
 	\begin{align*}
-		\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}
+		\frac{a}{b} + \frac{c}{d} = \frac{a'}{b'} + \frac{c'}{d'} \iff \frac{ad + bc}{bd} = \frac{a'd' + b'c'}{b'd'}
 	\end{align*}
-	et :
+	\\
+	Montrons que :
 	\begin{align*}
-		\frac{a'}{b'} + \frac{c'}{d'} = \frac{a'd' + b'c'}{b'd'}
-	\end{align*}
-	Montrons que : 
+		(ad + bc)b'd' = (a'd' + b'c')bd \iff (ad + bc)b'd' - (a'd' + b'c')bd = 0
+	\end{align*} 
 	\begin{align*}
-		\frac{ad + bc}{bd} = \frac{a'd' + b'c'}{b'd'}
+		(ad + bc)b'd' - (a'd' + b'c')bd &= adb'd' + bcb'd' - a'd'bd - b'c'bd \\
+		&= (ab' - a'b)dd' + bb'(cd' - c'd)
 	\end{align*}
-	On suppose que : 
-	\begin{align*}
-		\frac{a}{b} = \frac{a'}{b'} \iff a'b = ab' \\
-		\frac{c}{d} = \frac{c'}{d'} \iff c'd = cd'
-	\end{align*}
-	On aurait donc :
-	\begin{align*}
-		&\frac{ad + bc}{bd} = \frac{a'd' + b'c'}{b'd'} \\
-		\iff &(ad + bc)b'd' = bd(a'd' + b'c') \\
-		\iff &(ad + bc)b'd' - bd(a'd' + b'c') = 0
-	\end{align*}
-	\begin{align*}
-		(ad + bc)b'd' - bd(a'd' + b'c') &= (adb'd' + bcb'd') - (bda'd' + bdb'c')\\
-		&= adb'd' + bcb'd' - bda'd' - bdb'c' \\
-		&= adb'd' - a'd'bd + bcb'd' - b'c'bd \\
-		&= ab'dd' - a'bdd' + cd'bb' - c'dbb' \\
-		&= (ab' - a'b)dd' + (cd' - c'd)dd'
-	\end{align*}
-	D'après l'hypothèse de départ :
-	\begin{align*}
-		ab' = a'b \iff ab' - a'b = 0 \\
-		cd' = c'd \iff cd' - c'd = 0
-	\end{align*}
-	Donc : 
-	\begin{align*}
-		(\underbrace{ab' - a'b}_{0})dd' + (\underbrace{cd' - c'd}_0)dd' = 0
-	\end{align*}
-	On obtient alors :
-	\begin{align*}
-		(ad + bc)b'd' - bd(a'd' + b'c') = 0
-	\end{align*}
+	Or d'après l'hypothèse de départ $ab' - a'b = 0$ et $cd' - c'd = 0$ ainsi l'égalité est vérifiée.
 \end{proof}
 
 \begin{graybox}
 	\begin{proposition}[Multiplication sur les fractions]
 		\begin{align*}
-			\forall (a, b, c, d) \in \Z^4,\ \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}	
+			\forall (a, b, c, d) \in \Z^4 \text{ tel que } b, d \neq 0,\ \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}	
 		\end{align*}
 	\end{proposition}
 \end{graybox}
 
-\begin{proof}~
+\begin{proof}
+	$\forall (a, b, c, d, a', b', c', d') \in \Z^8 \text{ tel que } b, d, b', d' \neq 0$ \\
+	On considère que 
+	$\frac{a}{b} = \frac{a'}{b'} \text{ si } ab' = a'b$
+	et 
+	$\frac{c}{d} = \frac{c'}{d'} \text{ si } cd' = c'd$
 	\\
-	$\forall (a, b, c, d, a', b', c', d') \in \Z^8$\\
-	D'après la proposition on a :
+	Vérifions que si $\frac{a}{b} = \frac{a'}{b'}$ et que $\frac{c}{d} = \frac{c'}{d'}$, alors :
 	\begin{align*}
-		\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}
-	\end{align*}
-	et :
-	\begin{align*}
-		\frac{a'}{b'} \cdot \frac{c'}{d'} = \frac{a'c'}{b'd'}
+		\frac{a}{b} \cdot \frac{c}{d} = \frac{a'}{b'} \cdot \frac{c'}{d'} \iff \frac{ac}{bd} = \frac{a'b'}{c'd'}
 	\end{align*}
 	Montrons que :
 	\begin{align*}
-		\frac{ac}{bd} = \frac{a'c'}{b'd'}
-	\end{align*}
-	On suppose que : 
-	\begin{align*}
-		\frac{a}{b} = \frac{a'}{b'} \iff a'b = ab' \\
-		\frac{c}{d} = \frac{c'}{d'} \iff c'd = cd'
-	\end{align*}
-	On aurait donc :
-	\begin{align*}
-		&\frac{ac}{bd} = \frac{a'c'}{b'd'} \\
-		\iff &acb'd' = bda'c' \\
-		\iff &acb'd' - bda'c' = 0
+		ac b'd' = a'c' bd \iff ac b' d' - a'c' bd = 0
 	\end{align*}
 	\begin{align*}
-		acb'd' - bda'c' &= (ab')(cd') - (a'b)(c'd) \\
-		&= (ab')(cd') - (a'b)(cd') + (a'b)(cd') - (a'b)(c'd) \\
-		&= (ab' - a'b)(cd') + (cd' - c'd)(a'b)
+		acb'd' - a'c'bd &= ab' cd' - a'b c'd \\
+		&= (ab' - a'b)cd' + (cd' - c'd)a'b 
 	\end{align*}
-	D'après l'hypothèse de départ :
-	\begin{align*}
-		ab' = a'b \iff ab' - a'b = 0 \\
-		cd' = c'd \iff cd' - c'd = 0
-	\end{align*}
-	Donc :
-	\begin{align*}
-		(\underbrace{ab' - a'b}_0)(cd') + (\underbrace{cd' - c'd}_0)(a'b) = 0
-	\end{align*}
-	On obtient alors :
-	\begin{align*}
-		acb'd' - bda'c' = 0
-	\end{align*}
+	Or d'après l'hypothèse de départ $ab' - a'b = 0$ et $cd' - c'd = 0$, ainsi l'égalité est vérifiée.
 \end{proof}
 \section{Sommes}
 
